@@ -1,0 +1,427 @@
+<title>Attack Shark X68PRO vs LDON Mide68 Pro — Comparativa</title>
+<style>
+  :root {
+    --bg:        #0f1217;
+    --bg-2:      #161a21;
+    --surface:   #1b2029;
+    --surface-2: #212733;
+    --line:      #2b323e;
+    --line-soft: #232932;
+    --ink:       #e6e9ef;
+    --ink-mid:   #aab1bf;
+    --ink-dim:   #7c8493;
+    --as:        #3fbaf3;  /* Attack Shark — cian tiburón */
+    --as-soft:   #143246;
+    --md:        #f0a830;  /* Mide68 — ámbar (sus switches "Amber") */
+    --md-soft:   #3a2a10;
+    --good:      #57d98a;
+    --warn:      #f0a830;
+    --bad:       #f0726b;
+    --tie:       #9aa3b2;
+    --maxw:      1080px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+  /* ---------- header ---------- */
+  header.masthead {
+    border-bottom: 1px solid var(--line);
+    background:
+      radial-gradient(120% 140% at 15% -10%, rgba(63,186,243,0.10), transparent 55%),
+      radial-gradient(120% 140% at 90% -20%, rgba(240,168,48,0.10), transparent 55%),
+      var(--bg-2);
+    padding: 48px 0 36px;
+  }
+  .eyebrow {
+    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-dim); font-weight: 600; margin: 0 0 14px;
+  }
+  h1 {
+    font-size: clamp(28px, 5vw, 46px);
+    line-height: 1.08; margin: 0; font-weight: 800; letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  h1 .vs { color: var(--ink-dim); font-weight: 500; }
+  h1 .name-as { color: var(--as); }
+  h1 .name-md { color: var(--md); }
+  .subhead {
+    margin: 18px 0 0; max-width: 60ch; color: var(--ink-mid); font-size: 16px;
+  }
+
+  /* ---------- verdict banner ---------- */
+  .verdict {
+    margin-top: 30px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  }
+  .vcard {
+    border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px;
+    background: var(--surface); position: relative; overflow: hidden;
+  }
+  .vcard::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  }
+  .vcard.as::before { background: var(--as); }
+  .vcard.md::before { background: var(--md); }
+  .vcard h3 { margin: 0 0 4px; font-size: 17px; font-weight: 700; }
+  .vcard.as h3 { color: var(--as); }
+  .vcard.md h3 { color: var(--md); }
+  .vcard .price { font-size: 13px; color: var(--ink-dim); margin: 0 0 10px;
+    font-variant-numeric: tabular-nums; }
+  .vcard p { margin: 0; font-size: 14px; color: var(--ink-mid); }
+  .vcard .tag {
+    display: inline-block; margin-top: 12px; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.05em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px;
+  }
+  .vcard.as .tag { background: var(--as-soft); color: var(--as); }
+  .vcard.md .tag { background: var(--md-soft); color: var(--md); }
+
+  /* ---------- score strip ---------- */
+  .scorebar {
+    display: flex; align-items: center; gap: 14px; margin-top: 22px;
+    font-size: 13px; color: var(--ink-dim); flex-wrap: wrap;
+  }
+  .scorebar .meter {
+    flex: 1 1 220px; height: 10px; border-radius: 999px; overflow: hidden;
+    display: flex; min-width: 200px; border: 1px solid var(--line);
+  }
+  .scorebar .meter .seg-as { background: var(--as); }
+  .scorebar .meter .seg-md { background: var(--md); }
+  .scorebar b { color: var(--ink); font-variant-numeric: tabular-nums; }
+
+  /* ---------- legend (sticky) ---------- */
+  .legend {
+    position: sticky; top: 0; z-index: 5;
+    background: rgba(15,18,23,0.86); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 0;
+  }
+  .legend-inner { display: grid; grid-template-columns: minmax(0,1.1fr) 1fr 1fr; gap: 12px; align-items: center; }
+  .legend .point-label-h { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-dim); font-weight: 600; }
+  .legend .leg { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; }
+  .legend .dot { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+  .legend .leg.as .dot { background: var(--as); }
+  .legend .leg.md .dot { background: var(--md); }
+  .legend .leg.as { color: var(--as); }
+  .legend .leg.md { color: var(--md); }
+  .legend .leg small { display: block; color: var(--ink-dim); font-weight: 500; font-size: 11px; }
+
+  /* ---------- sections ---------- */
+  section { padding: 38px 0 6px; }
+  .sec-head { display: flex; align-items: baseline; gap: 12px; margin: 0 0 18px; }
+  .sec-num {
+    font-size: 12px; font-weight: 700; color: var(--ink-dim);
+    font-variant-numeric: tabular-nums; letter-spacing: 0.05em;
+    border: 1px solid var(--line); border-radius: 6px; padding: 3px 8px; flex: none;
+  }
+  .sec-head h2 { font-size: 20px; margin: 0; font-weight: 700; letter-spacing: -0.01em; }
+
+  /* ---------- comparison point ---------- */
+  .point {
+    border: 1px solid var(--line-soft); border-radius: 12px;
+    background: var(--surface); margin-bottom: 14px; overflow: hidden;
+  }
+  .point-top {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    padding: 13px 18px; border-bottom: 1px solid var(--line-soft);
+    background: var(--surface-2);
+  }
+  .point-top .label { font-weight: 700; font-size: 15px; }
+  .chip {
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 999px; white-space: nowrap; flex: none;
+  }
+  .chip.as { background: var(--as-soft); color: var(--as); }
+  .chip.md { background: var(--md-soft); color: var(--md); }
+  .chip.tie { background: #262c37; color: var(--tie); }
+
+  .point-cols { display: grid; grid-template-columns: 1fr 1fr; }
+  .cell { padding: 14px 18px; font-size: 14.5px; }
+  .cell.as { border-right: 1px solid var(--line-soft); }
+  .cell .who {
+    display: none; font-size: 11px; font-weight: 700; letter-spacing: 0.05em;
+    text-transform: uppercase; margin-bottom: 5px;
+  }
+  .cell.as .who { color: var(--as); }
+  .cell.md .who { color: var(--md); }
+  .cell .val { color: var(--ink); }
+  .cell .val .q { color: var(--bad); font-weight: 600; }
+  .cell .val .y { color: var(--good); font-weight: 600; }
+  .cell .note { display: block; margin-top: 4px; font-size: 12.5px; color: var(--ink-dim); }
+
+  .explain {
+    margin: 0; padding: 13px 18px; font-size: 13.5px; color: var(--ink-mid);
+    background: var(--bg-2); border-top: 1px solid var(--line-soft);
+  }
+  .explain strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- final verdict ---------- */
+  .closing {
+    margin: 44px 0 60px; border: 1px solid var(--line); border-radius: 14px;
+    background:
+      radial-gradient(100% 120% at 100% 0%, rgba(240,168,48,0.07), transparent 60%),
+      radial-gradient(100% 120% at 0% 0%, rgba(63,186,243,0.07), transparent 60%),
+      var(--surface);
+    padding: 28px 26px;
+  }
+  .closing h2 { margin: 0 0 14px; font-size: 22px; }
+  .closing p { color: var(--ink-mid); font-size: 15px; max-width: 70ch; }
+  .closing .rec { color: var(--ink); }
+  .closing .rec b.as { color: var(--as); }
+  .closing .rec b.md { color: var(--md); }
+  .pick-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 20px; }
+  .pick { border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; background: var(--bg-2); }
+  .pick .who { font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 6px; }
+  .pick.as .who { color: var(--as); }
+  .pick.md .who { color: var(--md); }
+  .pick p { margin: 0; font-size: 13.5px; }
+
+  .caveat {
+    margin: 0 0 60px; font-size: 12.5px; color: var(--ink-dim);
+    border-left: 2px solid var(--line); padding: 4px 0 4px 14px; max-width: 75ch;
+  }
+
+  footer { border-top: 1px solid var(--line); padding: 22px 0 40px; color: var(--ink-dim); font-size: 12px; }
+
+  @media (max-width: 680px) {
+    .verdict, .pick-row { grid-template-columns: 1fr; }
+    .legend { display: none; }
+    .point-cols { grid-template-columns: 1fr; }
+    .cell.as { border-right: none; border-bottom: 1px solid var(--line-soft); }
+    .cell .who { display: block; }
+    .point-top { flex-wrap: wrap; }
+  }
+</style>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Comparativa de teclados gaming · Hall Effect 65%</p>
+    <h1><span class="name-as">Attack Shark X68PRO</span> <span class="vs">vs.</span> <span class="name-md">LDON Mide68 Pro</span></h1>
+    <p class="subhead">Dos teclados magnéticos compactos que se parecen en la ficha, pero juegan en ligas distintas. Punto por punto, qué dice cada uno y qué significa de verdad.</p>
+
+    <div class="verdict">
+      <div class="vcard as">
+        <h3>Attack Shark X68PRO + X11</h3>
+        <p class="price">≈ $83 USD (teclado) · ≈ $90–110 USD (combo con mouse)</p>
+        <p>Marca real, tri-modo inalámbrico, software QMK maduro, hot-swap y mouse incluido. El paquete más completo.</p>
+        <span class="tag">Recomendado</span>
+      </div>
+      <div class="vcard md">
+        <h3>LDON Mide68 Pro</h3>
+        <p class="price">≈ $25–35 USD (AliExpress) · est. $140k–250k COP</p>
+        <p>Hall Effect genérico/OEM chino. Barato y funcional para empezar, pero specs sin verificar y cero marca detrás.</p>
+        <span class="tag">Opción económica</span>
+      </div>
+    </div>
+
+    <div class="scorebar">
+      <span>Balance de puntos a favor</span>
+      <span class="meter" role="img" aria-label="Attack Shark gana la mayoría de criterios">
+        <span class="seg-as" style="width:78%"></span>
+        <span class="seg-md" style="width:22%"></span>
+      </span>
+      <span><b style="color:var(--as)">X68PRO</b> domina 5 de 6 ejes · <b style="color:var(--md)">Mide68</b> gana en precio</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend">
+  <div class="wrap legend-inner">
+    <span class="point-label-h">Criterio</span>
+    <span class="leg as"><span class="dot"></span>Attack Shark X68PRO <small>marca · combo</small></span>
+    <span class="leg md"><span class="dot"></span>LDON Mide68 Pro <small>OEM · revendido</small></span>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- 1. SWITCHES -->
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>Switches y actuación</h2></div>
+
+    <div class="point">
+      <div class="point-top"><span class="label">Tipo de switch</span><span class="chip tie">Empate técnico</span></div>
+      <div class="point-cols">
+        <div class="cell as"><span class="who">X68PRO</span><span class="val">Magnético Hall Effect — Outemu Jade White (lineal, ~37g)</span></div>
+        <div class="cell md"><span class="who">Mide68 Pro</span><span class="val">Lo venden como "Amber", pero el switch real es Outemu White Jade<span class="note">Mismo origen Outemu; "Amber" es nombre comercial</span></span></div>
+      </div>
+      <p class="explain">Sorpresa: <strong>los dos usan esencialmente el mismo switch magnético de Outemu</strong>. El "Amber" del Mide68 es marketing del color, no un fabricante distinto. En sensación de tecleo base parten casi iguales; la diferencia real está en lo que el firmware deja hacer con esa señal.</p>
+    </div>
+
+    <div class="point">
+      <div class="point-top"><span class="label">Rango de actuación ajustable</span><span class="chip as">Ventaja X68PRO</span></div>
+      <div class="point-cols">
+        <div class="cell as"><span class="who">X68PRO</span><span class="val">0.1 – 3.4 mm, verificado en reviews</span></div>
+        <div class="cell md"><span class="who">Mide68 Pro</span><span class="val">~0.8 mm declarado<span class="note">Rango exacto no confirmado por terceros</span></span></div>
+      </div>
+      <p class="explain">La actuación ajustable es el <strong>corazón de un teclado Hall Effect</strong>: decides a qué profundidad registra cada tecla. El X68PRO publica un rango amplio y verificado; el Mide68 da un dato suelto sin respaldo independiente. Más rango = más margen para afinar disparo rápido vs. evitar pulsaciones accidentales.</p>
+    </div>
+
+    <div class="point">
+      <div class="point-top"><span class="label">Rapid Trigger / precisión</span><span class="chip tie">Empate</span></div>
+      <div class="point-cols">
+        <div class="cell as"><span class="who">X68PRO</span><span class="val"><span class="y">Sí</span> · resolución 0.01 mm</span></div>
+        <div class="cell md"><span class="who">Mide68 Pro</span><span class="val"><span class="y">Sí</span> · 0.01 mm (RT) declarado</span></div>
+      </div>
+      <p class="explain">Ambos soportan <strong>Rapid Trigger</strong> (la tecla se "rearma" apenas la sueltas un poco, clave para counter-strafe en shooters). El "0.01 mm" es resolución nominal en los dos — un número de catálogo más que algo que se sienta en la práctica. Empate honesto.</p>
+    </div>
+  </section>
+
+  <!-- 2. CONECTIVIDAD -->
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Conectividad y latencia</h2></div>
+
+    <div class="point">
+      <div class="point-top"><span class="label">Modos de conexión</span><span class="chip as">Ventaja clara X68PRO</span></div>
+      <div class="point-cols">
+        <div class="cell as"><span class="who">X68PRO</span><span class="val"><span class="y">Tri-modo</span>: Bluetooth + 2.4 GHz inalámbrico + USB-C</span></div>
+        <div class="cell md"><span class="who">Mide68 Pro</span><span class="val"><span class="q">Solo cable</span> USB-C — sin inalámbrico</span></div>
+      </div>
+      <p class="explain">Aquí se abre la brecha más grande. El X68PRO se conecta <strong>por cable, dongle 2.4 GHz o Bluetooth</strong> y salta entre dispositivos; el Mide68 vive atado al cable. Si valoras escritorio limpio, llevarlo a otro lado o conectar a varios equipos, no hay comparación.</p>
+    </div>
+
+    <div class="point">
+      <div class="point-top"><span class="label">Polling rate (tasa de sondeo)</span><span class="chip tie">Empate con asterisco</span></div>
+      <div class="point-cols">
+        <div class="cell as"><span class="who">X68PRO</span><span class="val">8000 Hz por cable · 1000 Hz inalámbrico<span class="note">8K verificado, funciona como se anuncia</span></span></div>
+        <div class="cell md"><span class="who">Mide68 Pro</span><span class="val">8000 Hz por cable<span class="note">No medido por terceros — claim del vendedor</span></span></div>
+      </div>
+      <p class="explain">Los dos prometen 8 KHz <strong>solo por cable</strong>. En el X68PRO está verificado; en el Mide68 es palabra del vendedor. Dato a relativizar: el salto de 1 KHz → 8 KHz da una mejora real pero marginal y casi nadie la nota fuera de un setup de e-sports muy fino. No compres por este número.</p>
+    </div>
+  </section>
+
+  <!-- 3. CONSTRUCCIÓN -->
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>Construcción y materiales</h2></div>
+
+    <div class="point">
+      <div class="point-top"><span class="label">Keycaps</span><span class="chip as">Ventaja X68PRO</span></div>
+      <div class="point-cols">
+        <div class="cell as"><span class="who">X68PRO</span><span class="val">PBT double-shot — confirmado</span></div>
+        <div class="cell md"><span class="who">Mide68 Pro</span><span class="val">PBT double-shot declarado<span class="note">Plausible, pero sin verificar a mano</span></span></div>
+      </div>
+      <p class="explain">El <strong>PBT no se pone brillante ni se borra</strong> con el uso, a diferencia del ABS barato. Los dos lo prometen; en el X68PRO está confirmado por reviews, en el Mide68 es solo la ficha. Mismo estándar deseable, distinta confianza.</p>
+    </div>
+
+    <div class="point">
+      <div class="point-top"><span class="label">Hot-swap (cambiar switches)</span><span class="chip as">Ventaja X68PRO</span></div>
+      <div class="point-cols">
+        <div class="cell as"><span class="who">X68PRO</span><span class="val"><span class="y">Sí</span> en la versión PRO</span></div>
+        <div class="cell md"><span class="who">Mide68 Pro</span><span class="val"><span class="q">No confirmado</span> — asumir que no</span></div>
+      </div>
+      <p class="explain">Hot-swap = puedes <strong>sacar y poner switches sin soldar</strong>. Alarga la vida del teclado y permite experimentar. El X68PRO lo trae; en el Mide68 ninguna fuente lo confirma, así que se asume que no.</p>
+    </div>
+
+    <div class="point">
+      <div class="point-top"><span class="label">Estructura / amortiguación</span><span class="chip as">Leve ventaja X68PRO</span></div>
+      <div class="point-cols">
+        <div class="cell as"><span class="who">X68PRO</span><span class="val">Foam PORON + pad de silicona (confirmado)<span class="note">Mount top/direct, no gasket</span></span></div>
+        <div class="cell md"><span class="who">Mide68 Pro</span><span class="val">Gasket + placa metálica + foam declarados<span class="note">Probable case ABS; no verificado</span></span></div>
+      </div>
+      <p class="explain">El Mide68 promete <strong>montaje gasket</strong> (en teoría tecleo más suave y silencioso), pero nadie lo ha confirmado físicamente y su carcasa probablemente sea ABS. El X68PRO no presume gasket pero su amortiguación está verificada. Aquí "lo confirmado discreto" gana a "lo prometido vistoso".</p>
+    </div>
+  </section>
+
+  <!-- 4. SOFTWARE -->
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Software y funciones</h2></div>
+
+    <div class="point">
+      <div class="point-top"><span class="label">Configuración</span><span class="chip as">Ventaja clara X68PRO</span></div>
+      <div class="point-cols">
+        <div class="cell as"><span class="who">X68PRO</span><span class="val">QMK web driver (qmk.top) — sin instalar nada</span></div>
+        <div class="cell md"><span class="who">Mide68 Pro</span><span class="val">Web driver propio<span class="note">Software flojo y poco soportado (típico OEM)</span></span></div>
+      </div>
+      <p class="explain">Los dos se configuran en el navegador, pero el X68PRO usa <strong>QMK</strong>, un ecosistema maduro y conocido. El del Mide68 es genérico y el soporte de software es el punto débil clásico de estas marcas blancas. El software es lo que de verdad separa un HE bueno de uno mediocre.</p>
+    </div>
+
+    <div class="point">
+      <div class="point-top"><span class="label">Funciones gaming (SOCD, macros, DKS…)</span><span class="chip as">Ventaja X68PRO</span></div>
+      <div class="point-cols">
+        <div class="cell as"><span class="who">X68PRO</span><span class="val">Rapid Trigger, SOCD/Snap Tap, DKS, Mod-Tap, macros, RGB — confirmados</span></div>
+        <div class="cell md"><span class="who">Mide68 Pro</span><span class="val">RT y RGB sí; SOCD/macros mencionados<span class="note">No verificados por reviews</span></span></div>
+      </div>
+      <p class="explain"><strong>SOCD / Snap Tap</strong> (resolver pulsaciones opuestas A+D al instante) y <strong>DKS</strong> (varias acciones según profundidad) son las funciones que sacan provecho real al Hall Effect. En el X68PRO están confirmadas y completas; en el Mide68 aparecen en el copy pero sin pruebas.</p>
+    </div>
+  </section>
+
+  <!-- 5. MOUSE -->
+  <section>
+    <div class="sec-head"><span class="sec-num">05</span><h2>Mouse incluido</h2></div>
+
+    <div class="point">
+      <div class="point-top"><span class="label">¿Trae mouse?</span><span class="chip as">Solo X68PRO</span></div>
+      <div class="point-cols">
+        <div class="cell as"><span class="who">X68PRO (combo)</span><span class="val"><span class="y">Sí</span> — Attack Shark X11</span></div>
+        <div class="cell md"><span class="who">Mide68 Pro</span><span class="val"><span class="q">No</span> — solo teclado</span></div>
+      </div>
+      <p class="explain">La versión combo del X68PRO incluye el <strong>X11</strong>: sensor PixArt PAW3311, hasta 22.000 DPI, ~59–63 g ultraligero, tri-modo y dock de carga magnético con RGB. El Mide68 es teclado y nada más, así que necesitarías comprar mouse aparte — factor a sumar al precio real.</p>
+    </div>
+  </section>
+
+  <!-- 6. PRECIO -->
+  <section>
+    <div class="sec-head"><span class="sec-num">06</span><h2>Precio, garantía y respaldo</h2></div>
+
+    <div class="point">
+      <div class="point-top"><span class="label">Precio</span><span class="chip md">Ventaja Mide68</span></div>
+      <div class="point-cols">
+        <div class="cell as"><span class="who">X68PRO</span><span class="val">≈ $83 USD teclado · ≈ $90–110 combo</span></div>
+        <div class="cell md"><span class="who">Mide68 Pro</span><span class="val">≈ $25–35 USD · est. $140k–250k COP</span></div>
+      </div>
+      <p class="explain">El único eje donde el Mide68 gana con claridad: <strong>cuesta la mitad o menos</strong>. Es de los Hall Effect más baratos del mercado. Si el presupuesto manda y solo quieres entrar al mundo HE, ahí está su razón de ser.</p>
+    </div>
+
+    <div class="point">
+      <div class="point-top"><span class="label">Marca y soporte</span><span class="chip as">Ventaja clara X68PRO</span></div>
+      <div class="point-cols">
+        <div class="cell as"><span class="who">X68PRO</span><span class="val">Attack Shark — marca establecida con catálogo y comunidad</span></div>
+        <div class="cell md"><span class="who">Mide68 Pro</span><span class="val"><span class="q">"LDON" no es fabricante real</span><span class="note">Marca-tienda; THRONOS solo revende</span></span></div>
+      </div>
+      <p class="explain">"LDON / Mide68" es un <strong>producto OEM white-label</strong> de la misma camada que MAD68, AULA WIN68 o MCHOSE Ace 68 — diseño de fábrica revendible bajo cualquier nombre. No hay marca detrás para soporte, repuestos ni reputación. El respaldo depende solo del revendedor.</p>
+    </div>
+
+    <div class="point">
+      <div class="point-top"><span class="label">Garantía</span><span class="chip as">Ventaja X68PRO</span></div>
+      <div class="point-cols">
+        <div class="cell as"><span class="who">X68PRO</span><span class="val">Respaldo de marca (canal oficial / Amazon)</span></div>
+        <div class="cell md"><span class="who">Mide68 Pro</span><span class="val"><span class="q">1 mes</span> (vendedor THRONOS)</span></div>
+      </div>
+      <p class="explain">Una garantía de <strong>solo 1 mes</strong> es señal de alerta en un periférico que debería durar años. Combinada con la ausencia de marca, deja todo el riesgo de QC en tu lado. El X68PRO se compra en canales con garantía y devolución más sólidas.</p>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <div class="closing">
+    <h2>Veredicto</h2>
+    <p class="rec">El <b class="as">Attack Shark X68PRO X11</b> es la mejor compra salvo que el presupuesto sea la prioridad absoluta: es marca real, inalámbrico tri-modo, trae mouse, tiene software QMK maduro y es hot-swap. El <b class="md">LDON Mide68 Pro</b> es un Hall Effect genérico decente para iniciarse barato, pero pagas el ahorro en QC incierto, software flojo, garantía de 1 mes y cero marca detrás — y sus specs estrella (8 KHz, 0.01 mm, gasket, PBT) no están verificadas por terceros.</p>
+
+    <div class="pick-row">
+      <div class="pick as">
+        <div class="who">Elige el X68PRO si…</div>
+        <p>Quieres inalámbrico, mouse incluido, poder cambiar switches y comprar algo que dure con respaldo de marca. Es el paquete completo.</p>
+      </div>
+      <div class="pick md">
+        <div class="who">Elige el Mide68 si…</div>
+        <p>Tu prioridad es el precio mínimo para probar el Hall Effect, ya tienes mouse y aceptas el riesgo de un OEM sin marca ni garantía.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="caveat">⚠️ Nota de fiabilidad: gran parte de los "reviews" del Mide68 que circulan son contenido SEO autogenerado por IA, no pruebas reales. Sus datos finos se reportan como <em>claim del vendedor</em>. Los datos del X68PRO provienen de la marca + reviews independientes (Amazon, sitios de teclados). Precios en COP son estimados — confirmar con MercadoLibre CO / THRONOS.</p>
+
+</main>
+
+<footer>
+  <div class="wrap">Comparativa armada a partir de fichas oficiales, listings (Amazon, AliExpress, Alibaba), manuales y reviews independientes · jun 2026 · Specs marcadas como "declarado" = sin verificación de terceros.</div>
+</footer>
