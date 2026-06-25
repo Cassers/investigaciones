@@ -191,6 +191,25 @@
     border-left: 2px solid var(--line); padding: 4px 0 4px 14px; max-width: 75ch;
   }
 
+  /* ---------- verification table ---------- */
+  .vsub { font-size: 15px; font-weight: 700; margin: 22px 0 10px; display: flex; align-items: center; gap: 9px; }
+  .vsub .dot { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+  .vsub.as { color: var(--as); } .vsub.as .dot { background: var(--as); }
+  .vsub.md { color: var(--md); } .vsub.md .dot { background: var(--md); }
+  .vtable-wrap { overflow-x: auto; border: 1px solid var(--line-soft); border-radius: 12px; margin-bottom: 6px; background: var(--surface); }
+  .vtable { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 560px; }
+  .vtable th, .vtable td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+  .vtable thead th { background: var(--surface-2); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-dim); font-weight: 700; }
+  .vtable tbody tr:last-child td { border-bottom: none; }
+  .vtable td.field { font-weight: 600; color: var(--ink); white-space: nowrap; }
+  .vtable td.seller { color: var(--ink-dim); }
+  .vtable td.real { color: var(--ink-mid); }
+  .st { font-weight: 700; white-space: nowrap; font-size: 12px; }
+  .st.ok { color: var(--good); }
+  .st.no { color: var(--bad); }
+  .st.un { color: var(--warn); }
+  .st.nu { color: var(--ink-dim); }
+
   footer { border-top: 1px solid var(--line); padding: 22px 0 40px; color: var(--ink-dim); font-size: 12px; }
 
   @media (max-width: 680px) {
@@ -281,13 +300,13 @@
   <section>
     <div class="sec-head"><span class="sec-num">02</span><h2>Conectividad y latencia</h2></div>
 
-    <div class="point">
-      <div class="point-top"><span class="label">Modos de conexión</span><span class="chip as">Ventaja clara X68PRO</span></div>
+    <div class="point" style="border-color:var(--warn)">
+      <div class="point-top"><span class="label">Modos de conexión</span><span class="chip" style="background:var(--md-soft);color:var(--warn)">⚠️ Ojo: depende de la versión</span></div>
       <div class="point-cols">
-        <div class="cell as"><span class="who">X68PRO</span><span class="val"><span class="y">Tri-modo</span>: Bluetooth + 2.4 GHz inalámbrico + USB-C</span></div>
+        <div class="cell as"><span class="who">X68 PRO HE</span><span class="val"><span class="y">Tri-modo</span>: Bluetooth + 2.4 GHz + USB-C · batería 5000 mAh<span class="note">El "X68 HE" base (sin "PRO") es SOLO cable, sin batería</span></span></div>
         <div class="cell md"><span class="who">Mide68 Pro</span><span class="val"><span class="q">Solo cable</span> USB-C — sin inalámbrico</span></div>
       </div>
-      <p class="explain">Aquí se abre la brecha más grande. El X68PRO se conecta <strong>por cable, dongle 2.4 GHz o Bluetooth</strong> y salta entre dispositivos; el Mide68 vive atado al cable. Si valoras escritorio limpio, llevarlo a otro lado o conectar a varios equipos, no hay comparación.</p>
+      <p class="explain"><strong>Atención antes de comprar:</strong> Attack Shark vende dos teclados magnéticos casi iguales: el <strong>X68 HE (solo cable)</strong> y el <strong>X68 PRO HE (tri-modo inalámbrico, 5000 mAh)</strong>. Solo el PRO es wireless. Algunas fichas de vendedor anuncian "combo X68PRO" pero describen el teclado como <em>"USB 2.0, sin Bluetooth, sin batería"</em> — eso en realidad es el modelo <strong>cableado</strong>. <strong>Verifica que diga "PRO" y mencione batería / 5000 mAh / 2.4 GHz / receptor.</strong> El mouse X11 sí es inalámbrico en ambos casos.</p>
     </div>
 
     <div class="point">
@@ -314,12 +333,12 @@
     </div>
 
     <div class="point">
-      <div class="point-top"><span class="label">Hot-swap (cambiar switches)</span><span class="chip as">Ventaja X68PRO</span></div>
+      <div class="point-top"><span class="label">Hot-swap (cambiar switches)</span><span class="chip tie">Ambos, con matices</span></div>
       <div class="point-cols">
-        <div class="cell as"><span class="who">X68PRO</span><span class="val"><span class="y">Sí</span> en la versión PRO</span></div>
-        <div class="cell md"><span class="who">Mide68 Pro</span><span class="val"><span class="q">No confirmado</span> — asumir que no</span></div>
+        <div class="cell as"><span class="who">X68 PRO HE</span><span class="val"><span class="y">Sí, anunciado oficialmente</span><span class="note">"Hot-Swap" en el título oficial · acepta switches magnéticos Magnetic Jade / compatibles · confianza alta</span></span></div>
+        <div class="cell md"><span class="who">Mide68 Pro</span><span class="val">Reemplazable de facto — trae extractor + 2 switches de repuesto<span class="note">No lo publicitan como "hot-swap"; sin despiece que lo confirme · confianza media</span></span></div>
       </div>
-      <p class="explain">Hot-swap = puedes <strong>sacar y poner switches sin soldar</strong>. Alarga la vida del teclado y permite experimentar. El X68PRO lo trae; en el Mide68 ninguna fuente lo confirma, así que se asume que no.</p>
+      <p class="explain"><strong>Corrección tras investigar a fondo:</strong> los switches magnéticos <strong>no tienen pines que soldar</strong>, así que se jalan con un extractor. El <strong>X68 PRO HE sí lo anuncia oficialmente</strong> (confianza alta). El <strong>Mide68 incluye extractor + 2 switches de repuesto</strong> — señal fuerte de que es reemplazable de facto, aunque el vendedor no use la palabra "hot-swap" y no exista un teardown que lo confirme (confianza media). Ojo: en ambos solo sirven <strong>switches magnéticos compatibles</strong> (Outemu), no mecánicos normales.</p>
     </div>
 
     <div class="point">
@@ -399,6 +418,50 @@
       </div>
       <p class="explain">Una garantía de <strong>solo 1 mes</strong> es señal de alerta en un periférico que debería durar años. Combinada con la ausencia de marca, deja todo el riesgo de QC en tu lado. El X68PRO se compra en canales con garantía y devolución más sólidas.</p>
     </div>
+  </section>
+
+  <!-- 7. CONTRASTE FICHA VENDEDOR -->
+  <section>
+    <div class="sec-head"><span class="sec-num">07</span><h2>Contraste con la ficha del vendedor</h2></div>
+    <p style="color:var(--ink-mid);font-size:14px;margin:-8px 0 18px;max-width:74ch">Qué dice el listado de MercadoLibre (THRONOS) frente a lo que confirman fabricante y reviews. Las fichas de MercadoLibre se autocompletan con descuido: <strong>varios campos están mal</strong>. Estado: <span class="st ok">✅ confirmado</span> · <span class="st no">❌ contradicho</span> · <span class="st un">❓ sin verificar / claim</span>.</p>
+
+    <div class="vsub as"><span class="dot"></span>Attack Shark — Combo X68PRO X11</div>
+    <div class="vtable-wrap">
+      <table class="vtable">
+        <thead><tr><th>Campo</th><th>Ficha dice</th><th>Realidad</th><th>Estado</th></tr></thead>
+        <tbody>
+          <tr><td class="field">Resolución mouse</td><td class="seller">400 dpi</td><td class="real">Hasta 22.000 DPI — "400" es valor de relleno</td><td><span class="st no">❌</span></td></tr>
+          <tr><td class="field">Bluetooth teclado</td><td class="seller">No</td><td class="real">Sí tiene BT (el X68 PRO HE es tri-modo)</td><td><span class="st no">❌</span></td></tr>
+          <tr><td class="field">Conexión teclado</td><td class="seller">USB 2.0</td><td class="real">Tri-modo: BT + 2.4 GHz + USB-C (oculta el inalámbrico)</td><td><span class="st no">❌</span></td></tr>
+          <tr><td class="field">Arquitectura</td><td class="seller">Mechanical</td><td class="real">Magnético / Hall Effect (la ficha se contradice)</td><td><span class="st no">❌</span></td></tr>
+          <tr><td class="field">Layout</td><td class="seller">60%</td><td class="real">~65% / 68 teclas con flechas</td><td><span class="st un">❓</span></td></tr>
+          <tr><td class="field">Tipo de switch</td><td class="seller">Magnetic</td><td class="real">Correcto — Hall Effect (Outemu Jade)</td><td><span class="st ok">✅</span></td></tr>
+          <tr><td class="field">Sensor mouse</td><td class="seller">PixArt PAW3311</td><td class="real">Correcto</td><td><span class="st ok">✅</span></td></tr>
+          <tr><td class="field">Recargable</td><td class="seller">Sí</td><td class="real">Sí (teclado 5000 mAh / mouse 300 mAh)</td><td><span class="st ok">✅</span></td></tr>
+          <tr><td class="field">Polling 8000 Hz</td><td class="seller">implícito</td><td class="real">Real solo por cable; 1000 Hz en inalámbrico</td><td><span class="st un">❓</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="explain" style="border:none;background:transparent;padding:6px 2px 0;color:var(--ink-dim)">Al menos <strong>4 campos están mal</strong> (DPI, BT teclado, conexión, arquitectura), todos por autocompletado descuidado — no porque sea otro producto. Aun así, si la ficha dice "USB 2.0 / sin BT / sin batería", <strong>confirma con el vendedor</strong> que sea el PRO inalámbrico y no el X68 HE cableado.</p>
+
+    <div class="vsub md"><span class="dot"></span>LDON Mide68 Pro</div>
+    <div class="vtable-wrap">
+      <table class="vtable">
+        <thead><tr><th>Campo / Claim</th><th>Ficha dice</th><th>Realidad</th><th>Estado</th></tr></thead>
+        <tbody>
+          <tr><td class="field">Teclado numérico</td><td class="seller">Sí</td><td class="real">Falso — es 65% / 68 teclas, sin numpad</td><td><span class="st no">❌</span></td></tr>
+          <tr><td class="field">Tipo de switch</td><td class="seller">Magnético</td><td class="real">Outemu White Jade (Hall Effect) — confirmado</td><td><span class="st ok">✅</span></td></tr>
+          <tr><td class="field">Inalámbrico</td><td class="seller">No (cable)</td><td class="real">Confirmado: solo cable USB-C</td><td><span class="st ok">✅</span></td></tr>
+          <tr><td class="field">Software web</td><td class="seller">Sí</td><td class="real">Confirmado en manual oficial</td><td><span class="st ok">✅</span></td></tr>
+          <tr><td class="field">8000 Hz · 0.125 ms · 0.01 mm · 128K</td><td class="seller">sí</td><td class="real">Claim del vendedor, sin medición de terceros. "0.125 ms" es solo 1÷8000 Hz</td><td><span class="st un">❓</span></td></tr>
+          <tr><td class="field">Gasket · PBT · placa metálica</td><td class="seller">sí</td><td class="real">Copy del vendedor, sin teardown; placa ABS vs metal en conflicto</td><td><span class="st un">❓</span></td></tr>
+          <tr><td class="field">Dimensiones / peso</td><td class="seller">32.5×11.5×3.8 cm · 539 g</td><td class="real">Plausibles para un 65%, pero sin pesaje independiente</td><td><span class="st un">❓</span></td></tr>
+          <tr><td class="field">Switches "Amber"</td><td class="seller">Amber</td><td class="real">"Amber" es el color; el switch real es Outemu White Jade</td><td><span class="st un">⚠️</span></td></tr>
+          <tr><td class="field">Marca "LDON"</td><td class="seller">marca</td><td class="real">Marca-tienda; producto OEM white-label (THRONOS revende)</td><td><span class="st un">⚠️</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="explain" style="border:none;background:transparent;padding:6px 2px 0;color:var(--ink-dim)">Lo verificable confirma (switch, cable, software), pero <strong>casi todas las specs estrella son claim del vendedor sin respaldo de terceros</strong>, y el único dato claramente falso es el "teclado numérico". No hay teardown que valide gasket, PBT ni placa metálica.</p>
   </section>
 
   <!-- CLOSING -->

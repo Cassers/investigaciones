@@ -45,11 +45,12 @@ Ambos soportan Rapid Trigger (la tecla se "rearma" apenas la sueltas un poco, cl
 
 ## 02 · Conectividad y latencia
 
-### Modos de conexión — 🔵 *Ventaja clara X68PRO*
-- **X68PRO:** **Tri-modo** — Bluetooth + 2.4 GHz inalámbrico + USB-C
+### Modos de conexión — ⚠️ *Ojo: depende de la versión*
+- **X68 PRO HE:** **Tri-modo** — Bluetooth + 2.4 GHz + USB-C · batería 5000 mAh
+- **X68 HE (base, sin "PRO"):** **solo cable**, sin batería
 - **Mide68 Pro:** Solo cable USB-C — sin inalámbrico
 
-La brecha más grande. El X68PRO se conecta por cable, dongle 2.4 GHz o Bluetooth y salta entre dispositivos; el Mide68 vive atado al cable.
+> **⚠️ Atención antes de comprar:** Attack Shark vende dos teclados magnéticos casi iguales: el **X68 HE (solo cable)** y el **X68 PRO HE (tri-modo inalámbrico, 5000 mAh)**. Solo el PRO es wireless. Algunas fichas de vendedor anuncian "combo X68PRO" pero describen el teclado como *"USB 2.0, sin Bluetooth, sin batería"* — eso en realidad es el modelo **cableado**. Verifica que diga **"PRO"** y mencione **batería / 5000 mAh / 2.4 GHz / receptor**. El mouse X11 sí es inalámbrico en ambos casos.
 
 ### Polling rate — 🟰 *Empate con asterisco*
 - **X68PRO:** 8000 Hz por cable · 1000 Hz inalámbrico (8K verificado)
@@ -67,11 +68,11 @@ Los dos prometen 8 KHz **solo por cable**. En el X68PRO está verificado; en el 
 
 El PBT no se pone brillante ni se borra con el uso, a diferencia del ABS barato. Mismo estándar deseable, distinta confianza.
 
-### Hot-swap (cambiar switches) — 🔵 *Ventaja X68PRO*
-- **X68PRO:** Sí, en la versión PRO
-- **Mide68 Pro:** No confirmado — asumir que no
+### Hot-swap (cambiar switches) — 🟰 *Ambos, con matices*
+- **X68 PRO HE:** **Sí, anunciado oficialmente** ("Hot-Swap" en el título) · acepta switches magnéticos Magnetic Jade / compatibles · **confianza alta**
+- **Mide68 Pro:** **Reemplazable de facto** — trae extractor + 2 switches de repuesto · no lo publicitan como "hot-swap", sin teardown que lo confirme · **confianza media**
 
-Hot-swap = sacar y poner switches sin soldar. Alarga la vida del teclado y permite experimentar.
+> **Corrección tras investigar a fondo:** los switches magnéticos **no tienen pines que soldar**, así que se jalan con un extractor. El X68 PRO HE sí lo anuncia oficialmente. El Mide68 incluye extractor + 2 switches de repuesto — señal fuerte de que es reemplazable de facto, aunque el vendedor no use la palabra. En ambos solo sirven **switches magnéticos compatibles (Outemu)**, no mecánicos normales.
 
 ### Estructura / amortiguación — 🔵 *Leve ventaja X68PRO*
 - **X68PRO:** Foam PORON + pad de silicona (confirmado); mount top/direct, no gasket
@@ -126,6 +127,45 @@ El único eje donde el Mide68 gana con claridad: **cuesta la mitad o menos**. Es
 - **Mide68 Pro:** **Solo 1 mes** (vendedor THRONOS)
 
 Una garantía de solo 1 mes es señal de alerta en un periférico que debería durar años.
+
+---
+
+## 07 · Contraste con la ficha del vendedor (MercadoLibre)
+
+Qué dice el listado de THRONOS frente a lo que confirman fabricante y reviews. Las fichas de MercadoLibre se autocompletan con descuido — **varios campos están mal**.
+Estado: ✅ confirmado · ❌ contradicho · ❓ sin verificar / claim del vendedor.
+
+### Attack Shark — Combo X68PRO X11
+
+| Campo | Ficha dice | Realidad | Estado |
+|---|---|---|---|
+| Resolución mouse | 400 dpi | Hasta **22.000 DPI** — "400" es valor de relleno | ❌ |
+| Bluetooth teclado | No | **Sí tiene BT** (el X68 PRO HE es tri-modo) | ❌ |
+| Conexión teclado | USB 2.0 | **Tri-modo**: BT + 2.4 GHz + USB-C | ❌ |
+| Arquitectura | Mechanical | **Magnético / Hall Effect** (la ficha se contradice) | ❌ |
+| Layout | 60% | ~65% / 68 teclas con flechas | ❓ |
+| Tipo de switch | Magnetic | Correcto — Hall Effect (Outemu Jade) | ✅ |
+| Sensor mouse | PixArt PAW3311 | Correcto | ✅ |
+| Recargable | Sí | Sí (teclado 5000 mAh / mouse 300 mAh) | ✅ |
+| Polling 8000 Hz | implícito | Real solo por cable; 1000 Hz inalámbrico | ❓ |
+
+**Al menos 4 campos están mal** (DPI, BT teclado, conexión, arquitectura), todos por autocompletado descuidado — no porque sea otro producto. Aun así, si la ficha dice "USB 2.0 / sin BT / sin batería", **confirma con el vendedor** que sea el PRO inalámbrico y no el X68 HE cableado.
+
+### LDON Mide68 Pro
+
+| Campo / Claim | Ficha dice | Realidad | Estado |
+|---|---|---|---|
+| Teclado numérico | Sí | **Falso** — es 65% / 68 teclas, sin numpad | ❌ |
+| Tipo de switch | Magnético | Outemu White Jade (Hall Effect) — confirmado | ✅ |
+| Inalámbrico | No (cable) | Confirmado: solo cable USB-C | ✅ |
+| Software web | Sí | Confirmado en manual oficial | ✅ |
+| 8000 Hz · 0.125 ms · 0.01 mm · 128K | sí | Claim del vendedor, sin medición de terceros. "0.125 ms" = 1÷8000 Hz | ❓ |
+| Gasket · PBT · placa metálica | sí | Copy del vendedor, sin teardown; placa ABS vs metal en conflicto | ❓ |
+| Dimensiones / peso | 32.5×11.5×3.8 cm · 539 g | Plausibles para un 65%, sin pesaje independiente | ❓ |
+| Switches "Amber" | Amber | "Amber" es el color; switch real = Outemu White Jade | ⚠️ |
+| Marca "LDON" | marca | Marca-tienda; producto OEM white-label | ⚠️ |
+
+Lo verificable confirma (switch, cable, software), pero **casi todas las specs estrella son claim del vendedor sin respaldo de terceros**, y el único dato claramente falso es el "teclado numérico".
 
 ---
 
