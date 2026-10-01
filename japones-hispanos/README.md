@@ -1,5 +1,7 @@
 # 🇯🇵 Por qué los hispanos quieren aprender japonés
 
+v2 profunda (2026-10-01): motivos + datos duros globales/LATAM, turismo récord, mercado laboral Bajío con sueldos, becas MEXT/JICA, dolores FSI/kanji/keigo y playbook grupo gratis 2h/sem. 36 fuentes.
+
 Motivos y dolores de hispanohablantes para aprender japonés: anime/manga sin subtítulos, cultura, viaje/vivir en Japón, trabajo (fuerte solo en MX Bajío), fonética fácil, comunidad.
 
 - KPIs: 80–95% entra por cultura/anime, 40% quiere vivir allá, 35% por trabajo (vs 70% en inglés), N5 = 325–600 h.
