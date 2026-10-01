@@ -50,6 +50,7 @@
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
+html,body{overflow-x:clip}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;font-size:16.5px}
 a{color:var(--ai);text-underline-offset:3px}
 a:hover{color:var(--shu)}
@@ -864,7 +865,8 @@ footer.foot{border-top:1px solid var(--line);margin-top:56px;padding:28px 0 48px
     var tr=el("div","bar-track"); tr.style.height="34px"; tr.style.display="block";
     var a=el("div","range lt"); a.style.left=(h[3]/HMAX*85)+"%"; a.style.width=((h[4]-h[3])/HMAX*85)+"%"; a.style.top="2px"; a.style.height="10px";
     var b=el("div","range"); b.style.left=(h[1]/HMAX*85)+"%"; b.style.width=((h[2]-h[1])/HMAX*85)+"%"; b.style.top="16px";
-    var v=el("span","bar-val",fmt.format(h[1])+"–"+fmt.format(h[2])+" h"); v.style.position="absolute"; v.style.left=(h[2]/HMAX*85+1)+"%"; v.style.top="12px";
+    var v=el("span","bar-val",fmt.format(h[1])+"–"+fmt.format(h[2])+" h"); v.style.position="absolute";
+    if(h[2]/HMAX>0.6){ v.style.right="0"; v.style.top="-4px"; v.style.margin="0"; } else { v.style.left=(h[2]/HMAX*85+1)+"%"; v.style.top="12px"; }
     tr.appendChild(a); tr.appendChild(b); tr.appendChild(v);
     row.appendChild(tr); hb.appendChild(row);
   });
@@ -893,7 +895,7 @@ footer.foot{border-top:1px solid var(--line);margin-top:56px;padding:28px 0 48px
       entries.forEach(function(en){
         if(en.isIntersecting){
           links.forEach(function(a){a.classList.remove("active");});
-          var a=map[en.target.id]; if(a){ a.classList.add("active"); try{ a.scrollIntoView({block:"nearest",inline:"center",behavior:"smooth"}); }catch(e){} }
+          var a=map[en.target.id]; if(a){ a.classList.add("active"); var nav=a.closest(".line-nav"); if(nav){ var ar=a.getBoundingClientRect(), nr=nav.getBoundingClientRect(); var target=nav.scrollLeft+(ar.left-nr.left)-(nav.clientWidth-ar.width)/2; nav.scrollTo({left:Math.max(0,target),behavior:"smooth"}); } }
         }
       });
     },{rootMargin:"-40% 0px -55% 0px"});
