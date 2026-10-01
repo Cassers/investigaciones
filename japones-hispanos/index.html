@@ -1,149 +1,908 @@
 <!doctype html>
-<html lang="es" data-theme="dark">
+<html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Por qué los hispanos quieren aprender japonés · Investigación profunda con 35+ fuentes</title>
-<meta name="description" content="Motivos, datos duros, mercado laboral, turismo, becas y dolores de hispanohablantes para aprender japonés. Japan Foundation, JNTO, FSI, MEXT, foros y papers.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hispanos y japonés · Investigación</title>
+<meta name="description" content="Por qué los hispanohablantes aprenden japonés: cuántos son por país, motivos, anime, viaje, trabajo, becas, visas, dificultad real y cómo empezar gratis en español. Datos Japan Foundation 2024, JLPT 2024, JNTO y 50+ fuentes.">
+<meta property="og:title" content="¿Por qué los hispanos quieren aprender japonés?">
+<meta property="og:description" content="42.758 alumnos en 20 países hispanos, motivos, trabajo, visas y dificultad real. Investigación con 50+ fuentes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-body{background:#0f1217;color:#e6e9ef;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0}
-a{color:#7db9ff}
-.article{max-width:900px;margin:0 auto;padding:32px 20px 64px;line-height:1.7}
-.article h1{font-size:2rem;margin:.2em 0}
-.article h2{margin-top:2.4em;border-top:1px solid #2b323e;padding-top:1em}
-.article h3{margin-top:1.6em}
-.article .lede{font-size:1.1rem;opacity:.92}
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:20px 0}
-.kpi{border:1px solid #2b323e;border-radius:12px;padding:14px;background:#161a21}
-.kpi strong{font-size:1.5rem;display:block}
-.kpi span{font-size:.9rem;opacity:.85}
-table.table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
-table.table th,table.table td{border:1px solid #2b323e;padding:8px 10px;text-align:left;vertical-align:top}
-table.table th{background:#161a21}
-.src{font-size:.9rem}
-.src li{margin-bottom:8px}
-.tag{display:inline-block;font-size:.8rem;border:1px solid #2b323e;border-radius:999px;padding:2px 10px;margin-right:6px}
-.note{background:#161a21;border:1px solid #2b323e;border-radius:12px;padding:12px 16px;margin:16px 0}
-footer.app-footer{max-width:900px;margin:0 auto;padding:0 20px 40px;color:#aab1bf}
-blockquote{border-left:3px solid #3fbaf3;margin:12px 0;padding:6px 14px;color:#c6cdd8;background:#161a21}
+:root{
+  color-scheme: light;
+  --bg:#f6f1e7; --surface:#fffdf8; --surface-2:#efe8da; --line:#ddd3c1; --line-soft:#e9e1d2;
+  --ink:#1f1b16; --ink-2:#5a5248; --ink-3:#7d7366;
+  --shu:#b8352a; --shu-soft:#f6ddd6;
+  --ai:#2d4a7c; --ai-soft:#dde5f2;
+  --matcha:#3f6b2e; --matcha-soft:#e1ecd8;
+  --kin:#8a5d00; --kin-soft:#f5e7c7;
+  --ref:#b3a999;
+  --shadow:0 1px 2px rgba(60,40,10,.06),0 8px 24px rgba(60,40,10,.06);
+  --maxw:1040px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#14161a; --surface:#1b1e23; --surface-2:#23272e; --line:#323844; --line-soft:#272c34;
+    --ink:#ece6da; --ink-2:#b9b1a3; --ink-3:#8f887c;
+    --shu:#ff7d63; --shu-soft:#3a201b;
+    --ai:#86a6e6; --ai-soft:#1e2a40;
+    --matcha:#93c978; --matcha-soft:#1f2c1a;
+    --kin:#e5b85a; --kin-soft:#33280f;
+    --ref:#5b5f68;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:#14161a; --surface:#1b1e23; --surface-2:#23272e; --line:#323844; --line-soft:#272c34;
+  --ink:#ece6da; --ink-2:#b9b1a3; --ink-3:#8f887c;
+  --shu:#ff7d63; --shu-soft:#3a201b;
+  --ai:#86a6e6; --ai-soft:#1e2a40;
+  --matcha:#93c978; --matcha-soft:#1f2c1a;
+  --kin:#e5b85a; --kin-soft:#33280f;
+  --ref:#5b5f68;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;font-size:16.5px}
+a{color:var(--ai);text-underline-offset:3px}
+a:hover{color:var(--shu)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:"Shippori Mincho",Georgia,serif;letter-spacing:-.01em;line-height:1.18;text-wrap:balance}
+.num{font-variant-numeric:tabular-nums}
+strong{font-weight:700}
+
+/* ---------- top bar ---------- */
+.topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar .row{display:flex;align-items:center;gap:12px;height:56px}
+.back{font-size:14px;color:var(--ink-2);text-decoration:none;white-space:nowrap}
+.back:hover{color:var(--shu)}
+.line-nav{flex:1;overflow-x:auto;scrollbar-width:none;mask-image:linear-gradient(90deg,transparent,#000 12px,#000 calc(100% - 12px),transparent)}
+.line-nav::-webkit-scrollbar{display:none}
+.line-nav ol{list-style:none;margin:0;padding:0 12px;display:flex;gap:0;position:relative;width:max-content}
+.line-nav li{position:relative}
+.line-nav a{display:flex;align-items:center;gap:6px;padding:6px 10px;font-size:13px;color:var(--ink-2);text-decoration:none;border-radius:999px;white-space:nowrap}
+.line-nav a .dot{width:9px;height:9px;border-radius:50%;border:2px solid var(--ink-3);background:var(--bg);flex:none}
+.line-nav a:hover{color:var(--ink)}
+.line-nav a.active{color:var(--ink);background:var(--surface-2)}
+.line-nav a.active .dot{border-color:var(--shu);background:var(--shu)}
+.theme-btn{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;height:34px;padding:0 12px;font:inherit;font-size:13px;cursor:pointer}
+.theme-btn:hover{border-color:var(--ink-3)}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;background:var(--shu);width:0}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:56px 0 40px;border-bottom:1px solid var(--line)}
+.hero .sun{position:absolute;right:-90px;top:-70px;width:340px;height:340px;border-radius:50%;background:var(--shu);opacity:.12;pointer-events:none}
+.hero .kana-bg{position:absolute;right:18px;bottom:-30px;font-family:"Shippori Mincho",serif;font-size:180px;line-height:1;color:var(--ink);opacity:.045;pointer-events:none;writing-mode:vertical-rl;font-weight:800}
+.eyebrow{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:500;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:3px 11px}
+.chip.hot{border-color:transparent;background:var(--shu-soft);color:var(--shu)}
+.hero h1{font-size:clamp(32px,6vw,58px);margin:0;font-weight:800;max-width:17ch}
+.hero h1 em{font-style:normal;color:var(--shu)}
+.lede{font-size:clamp(16.5px,2.2vw,19px);color:var(--ink-2);max-width:62ch;margin:18px 0 0}
+
+.tldr{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.tl{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;box-shadow:var(--shadow);position:relative}
+.tl .step{font-family:"Shippori Mincho",serif;font-size:13px;color:var(--shu);font-weight:800;letter-spacing:.08em}
+.tl h3{margin:4px 0 6px;font-size:20px}
+.tl p{margin:0;font-size:14.5px;color:var(--ink-2)}
+.tl .big{font-size:26px;font-weight:700;color:var(--ink);display:block;margin-top:10px;font-variant-numeric:tabular-nums}
+.tl .big small{font-size:13px;font-weight:500;color:var(--ink-3)}
+
+.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:22px}
+.stat{background:var(--surface);padding:14px 14px 12px}
+.stat b{display:block;font-size:22px;font-variant-numeric:tabular-nums;line-height:1.2}
+.stat span{display:block;font-size:12.5px;color:var(--ink-2);line-height:1.4;margin-top:4px}
+
+/* ---------- sections ---------- */
+section.block{padding:64px 0 8px;position:relative}
+.sec-head{display:flex;align-items:flex-end;gap:16px;margin-bottom:18px;position:relative}
+.sec-no{font-family:"Shippori Mincho",serif;font-weight:800;font-size:15px;color:#fff;background:var(--shu);border-radius:50%;width:42px;height:42px;display:grid;place-items:center;flex:none}
+.sec-head h2{font-size:clamp(25px,4vw,36px);margin:0}
+.sec-head .kanji{margin-left:auto;font-family:"Shippori Mincho",serif;font-size:56px;line-height:.8;color:var(--ink);opacity:.09;font-weight:800}
+.sec-sub{color:var(--ink-2);max-width:68ch;margin:-4px 0 22px;font-size:16.5px}
+.answer{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--shu);border-radius:12px;padding:14px 18px;margin:0 0 22px;font-size:16.5px}
+.answer b{color:var(--shu)}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 6px;font-size:19px}
+.card p{margin:6px 0 0;font-size:15px;color:var(--ink-2)}
+.card .tagline{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.card.accent{border-top:3px solid var(--shu)}
+.card.ai{border-top:3px solid var(--ai)}
+.card.matcha{border-top:3px solid var(--matcha)}
+.card.kin{border-top:3px solid var(--kin)}
+
+.note{background:var(--surface-2);border-radius:12px;padding:12px 16px;font-size:14.5px;color:var(--ink-2);margin:16px 0}
+.note b{color:var(--ink)}
+
+/* ---------- chart ---------- */
+.chart-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 18px 12px;box-shadow:var(--shadow);margin:0 0 18px}
+.chart-top{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start;justify-content:space-between;margin-bottom:12px}
+.chart-title{font-weight:700;font-size:16.5px;margin:0}
+.chart-cap{font-size:13px;color:var(--ink-3);margin:2px 0 0}
+.seg{display:inline-flex;background:var(--surface-2);border-radius:999px;padding:3px;gap:2px;flex-wrap:wrap}
+.seg button{border:0;background:transparent;color:var(--ink-2);font:inherit;font-size:13px;padding:5px 12px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12);font-weight:700}
+.bars{display:grid;gap:6px}
+.bar-row{display:grid;grid-template-columns:minmax(96px,200px) 1fr;gap:10px;align-items:center;font-size:14px;border-radius:6px;padding:2px 4px;cursor:default}
+.bar-row:hover,.bar-row:focus-visible{background:var(--surface-2);outline:none}
+.bar-label{color:var(--ink);line-height:1.25}
+.bar-label small{color:var(--ink-3)}
+.bar-track{position:relative;height:22px;display:flex;align-items:center}
+.bar-fill{height:14px;border-radius:0 4px 4px 0;background:var(--ai);min-width:2px;transition:width .5s cubic-bezier(.2,.7,.2,1),margin .5s}
+.bar-fill.ref{background:var(--ref)}
+.bar-fill.neg{background:var(--shu);border-radius:4px 0 0 4px}
+.bar-fill.hl{background:var(--shu)}
+.bar-val{margin-left:8px;font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar-axis{position:absolute;top:-3px;bottom:-3px;width:1px;background:var(--ink-3);opacity:.6}
+.range{position:absolute;height:14px;border-radius:4px;background:var(--ai)}
+.range.lt{background:var(--ai-soft);border:1px dashed var(--ai)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--ink-2);margin-top:10px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+details.tbl{margin-top:8px;font-size:13.5px}
+details.tbl summary{cursor:pointer;color:var(--ink-3);font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+th{font-size:12.5px;color:var(--ink-3);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.table-scroll{overflow-x:auto}
+
+.tip{position:fixed;z-index:50;pointer-events:none;background:var(--ink);color:var(--bg);font-size:13px;line-height:1.45;padding:8px 10px;border-radius:8px;max-width:260px;opacity:0;transform:translateY(4px);transition:opacity .12s,transform .12s;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.tip.on{opacity:1;transform:none}
+
+/* ---------- shift callout ---------- */
+.shift{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch;margin:18px 0}
+.shift .side{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}
+.shift .arrow{display:grid;place-items:center;font-size:28px;color:var(--shu);font-weight:700}
+.shift .k{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+.shift .v{font-size:30px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.15;margin:4px 0}
+.shift .v .from{color:var(--ink-3);text-decoration:line-through;font-size:20px;margin-right:6px}
+.shift p{margin:0;font-size:14px;color:var(--ink-2)}
+
+/* ---------- timeline ---------- */
+.timeline{list-style:none;margin:0;padding:0;position:relative}
+.timeline::before{content:"";position:absolute;left:62px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{display:grid;grid-template-columns:52px 1fr;gap:22px;padding:8px 0;position:relative}
+.timeline .y{font-weight:700;font-size:14px;text-align:right;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.timeline li::after{content:"";position:absolute;left:57px;top:15px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--shu)}
+.timeline .t{font-size:15px}
+.timeline .t span{color:var(--ink-2)}
+
+/* ---------- ladder ---------- */
+.ladder{display:grid;gap:10px}
+.rung{display:grid;grid-template-columns:76px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.rung .lv{display:grid;place-items:center;font-weight:800;font-size:22px;font-family:"Shippori Mincho",serif;color:#fff}
+.rung .lv small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:11px;font-weight:500;opacity:.9;text-align:center}
+.rung .body{padding:12px 16px}
+.rung .body b{font-size:15.5px}
+.rung .body p{margin:4px 0 0;font-size:14px;color:var(--ink-2)}
+.rung .hrs{font-size:12.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+
+/* ---------- pains ---------- */
+.pains{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+details.pain{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;overflow:hidden}
+details.pain summary{list-style:none;cursor:pointer;padding:14px 16px;display:flex;gap:12px;align-items:flex-start}
+details.pain summary::-webkit-details-marker{display:none}
+details.pain .ico{font-family:"Shippori Mincho",serif;font-weight:800;font-size:22px;width:40px;height:40px;border-radius:10px;background:var(--shu-soft);color:var(--shu);display:grid;place-items:center;flex:none}
+details.pain .st b{display:block;font-size:16px}
+details.pain .st span{font-size:13.5px;color:var(--ink-2)}
+details.pain .plus{margin-left:auto;color:var(--ink-3);font-size:20px;line-height:1;transition:transform .2s}
+details.pain[open] .plus{transform:rotate(45deg)}
+details.pain .more{padding:0 16px 14px 68px;font-size:14.5px;color:var(--ink-2)}
+details.pain .more p{margin:6px 0}
+details.pain .quote{font-style:italic;color:var(--ink)}
+details.pain .fix{background:var(--matcha-soft);color:var(--ink);border-radius:8px;padding:8px 10px;margin-top:8px}
+details.pain .fix b{color:var(--matcha)}
+
+/* ---------- calculator ---------- */
+.calc{display:grid;grid-template-columns:280px 1fr;gap:20px;align-items:start}
+.calc label{font-weight:700;font-size:14.5px;display:block}
+.calc input[type=range]{width:100%;accent-color:var(--shu);margin:10px 0 2px}
+.calc .hv{font-size:40px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
+.calc .hv small{font-size:15px;font-weight:500;color:var(--ink-2)}
+.presets{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.presets button{border:1px solid var(--line);background:var(--surface-2);color:var(--ink-2);border-radius:999px;font:inherit;font-size:12.5px;padding:4px 10px;cursor:pointer}
+.presets button:hover{border-color:var(--ink-3);color:var(--ink)}
+.calc-out{display:grid;gap:8px}
+.co{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;background:var(--surface-2);border-radius:10px;padding:9px 12px}
+.co .l{font-weight:800;font-family:"Shippori Mincho",serif}
+.co .what{font-size:13.5px;color:var(--ink-2)}
+.co .t{font-weight:700;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+
+/* ---------- visas ---------- */
+.visa-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.visa{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14px}
+.visa b{display:block;font-size:15px}
+.badge{display:inline-block;font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 8px;margin:4px 4px 0 0}
+.badge.ok{background:var(--matcha-soft);color:var(--matcha)}
+.badge.no{background:var(--shu-soft);color:var(--shu)}
+.badge.wh{background:var(--ai-soft);color:var(--ai)}
+
+/* ---------- resources ---------- */
+.res{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.res a.r{display:block;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;transition:border-color .15s,transform .15s}
+.res a.r:hover{border-color:var(--shu);transform:translateY(-1px)}
+.res a.r b{display:block;font-size:15px}
+.res a.r span{font-size:13px;color:var(--ink-2)}
+.res a.r em{font-style:normal;font-size:11.5px;font-weight:700;color:var(--matcha)}
+
+.checklist{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.checklist li{display:grid;grid-template-columns:28px 1fr;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px}
+.checklist li::before{content:"✓";display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--matcha-soft);color:var(--matcha);font-weight:700;font-size:13px}
+.checklist b{color:var(--ink)}
+
+/* ---------- sources ---------- */
+.src-groups{display:grid;gap:10px}
+details.src{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:0 16px}
+details.src summary{cursor:pointer;padding:12px 0;font-weight:700;font-size:15px}
+details.src summary span{font-weight:400;color:var(--ink-3);font-size:13px;margin-left:6px}
+details.src ol{margin:0 0 14px;padding-left:22px;font-size:14px}
+details.src li{margin-bottom:8px;color:var(--ink-2)}
+details.src li a{word-break:break-word}
+.tier{display:inline-block;font-size:10.5px;font-weight:700;border-radius:4px;padding:1px 5px;margin-right:6px;vertical-align:1px;border:1px solid var(--line);color:var(--ink-3)}
+.tier.l1{color:var(--matcha);border-color:currentColor}
+.tier.l2{color:var(--ai);border-color:currentColor}
+.tier.l3{color:var(--kin);border-color:currentColor}
+.tier.l4{color:var(--shu);border-color:currentColor}
+.new{font-size:10.5px;font-weight:700;color:var(--shu);margin-left:4px}
+
+footer.foot{border-top:1px solid var(--line);margin-top:56px;padding:28px 0 48px;color:var(--ink-3);font-size:14px}
+
+@media (max-width:860px){
+  .tldr{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .grid-2,.grid-3,.pains{grid-template-columns:1fr}
+  .calc{grid-template-columns:1fr}
+  .shift{grid-template-columns:1fr}
+  .shift .arrow{transform:rotate(90deg);height:28px}
+  .sec-head .kanji{font-size:40px}
+  .hero .kana-bg{font-size:120px}
+}
+@media (max-width:480px){
+  body{font-size:16px}
+  .back span{display:none}
+  .bar-row{grid-template-columns:104px 1fr;font-size:13px}
+  details.pain .more{padding-left:16px}
+  .timeline::before{left:50px}
+  .timeline li{grid-template-columns:40px 1fr}
+  .timeline li::after{left:45px}
+  .rung{grid-template-columns:60px 1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<div class="article">
-<p><a href="../">← Todas las investigaciones</a></p>
-<p><span class="tag">Investigación v2 profunda</span> <span class="tag">Hispanos · japonés</span> <span class="tag">Actualizado 2026-10-01</span></p>
-<h1>Por qué los hispanos quieren aprender japonés</h1>
-<p class="lede">Entran por <strong>anime/manga</strong>, se quedan por <strong>cultura y viaje</strong>, pocos por <strong>empleo</strong> — y ese empleo existe sobre todo en el Bajío mexicano. Abandonan por <strong>kanji, keigo, falta de tiempo y falta de material en español</strong>. Abajo: datos duros globales, LATAM, turismo récord, mercado laboral con sueldos, becas y qué implica para un grupo gratuito 2h/sem.</p>
 
-<div class="kpi-grid">
-<div class="kpi"><strong>4.000.750</strong><span>estudiantes de japonés en el mundo (récord 2024, Japan Foundation)</span></div>
-<div class="kpi"><strong>85,5%</strong><span>en Europa Occidental cita anime/manga/J-pop como motivo (JF 2024)</span></div>
-<div class="kpi"><strong>200.400 MX + 245.600 ES</strong><span>visitaron Japón en 2025 (+32% récord, JNTO)</span></div>
-<div class="kpi"><strong>$55–70k MXN</strong><span>sueldo traductor japonés-español Bajío (N3–N1 + 2 años)</span></div>
-<div class="kpi"><strong>2.200 h</strong><span>para dominio profesional (FSI Cat. IV) · a 5h/sem = 8,5 años</span></div>
-<div class="kpi"><strong>28,5%</strong><span>queja por escasez de material didáctico (JF 2012)</span></div>
+<div class="topbar">
+  <div class="wrap row" style="position:relative">
+    <a class="back" href="../" title="Todas las investigaciones">← <span>Investigaciones</span></a>
+    <nav class="line-nav" aria-label="Secciones">
+      <ol>
+        <li><a href="#cuantos"><i class="dot"></i>Cuántos</a></li>
+        <li><a href="#porque"><i class="dot"></i>Por qué</a></li>
+        <li><a href="#anime"><i class="dot"></i>Anime</a></li>
+        <li><a href="#viaje"><i class="dot"></i>Viaje</a></li>
+        <li><a href="#trabajo"><i class="dot"></i>Trabajo</a></li>
+        <li><a href="#estudio"><i class="dot"></i>Becas</a></li>
+        <li><a href="#dificil"><i class="dot"></i>Lo difícil</a></li>
+        <li><a href="#tiempo"><i class="dot"></i>Cuánto tarda</a></li>
+        <li><a href="#empezar"><i class="dot"></i>Empezar</a></li>
+        <li><a href="#grupo"><i class="dot"></i>Tu grupo</a></li>
+        <li><a href="#fuentes"><i class="dot"></i>Fuentes</a></li>
+      </ol>
+    </nav>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Cambiar tema claro/oscuro">◐ Tema</button>
+    <div class="progress" id="progress"></div>
+  </div>
 </div>
 
-<h2>1. Dato duro global: la demanda crece y se mueve fuera de la escuela</h2>
-<div class="note">Japan Foundation <em>Survey on Japanese-Language Education Abroad 2024</em>: 143 países, 19.344 instituciones (+5,9%), 80.898 profes (+8,5%), 4.000.750 alumnos (+5,4%) — récord desde 1974. Secundaria ≈ mitad; <strong>no-escolar +49% en alumnos</strong> y supera a educación superior por primera vez desde 1990. Solo 30,9% ofrece online (era 63,1% en 2021). Top: China 1,01M, Indonesia 732k, Corea 555k; suben Myanmar (+424%) e India (+47%); bajan EEUU y Taiwán.</div>
-<p>Motivos top estables en Occidente: <strong>anime/manga/J-pop/moda 85,5% · interés en el idioma 80,1% · historia/literatura/arte 77,1%</strong> (capítulo Western Europe 2024). Mismo patrón en Barcelona (Lorente 2020): cultura 95%, productos culturales 80%.</p>
-<p>Matiz competitivo: en Francia el coreano ya canibaliza japonés en secundaria por la ola Hallyu; la reforma del baccalauréat 2021 (tercera lengua optativa sin oral) tumbó −24% alumnos. Lección: el motivo cultural sostiene pero es volátil.</p>
+<header class="hero">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="kana-bg" aria-hidden="true">日本語</div>
+  <div class="wrap" style="position:relative">
+    <p class="eyebrow">
+      <span class="chip hot">Investigación v3</span>
+      <span class="chip">Actualizado 1 oct 2026</span>
+      <span class="chip">50+ fuentes</span>
+      <span class="chip">Lectura ~12 min</span>
+    </p>
+    <h1>¿Por qué los hispanos quieren aprender <em>japonés</em>?</h1>
+    <p class="lede">Entran por el <strong>anime</strong>, se quedan por la <strong>cultura</strong> y cada vez más sueñan con <strong>ir a Japón</strong>: a estudiar, viajar o trabajar. Se caen por <strong>los kanji, el tiempo y la falta de material en español</strong>. Aquí están los números país por país y qué hacer con ellos.</p>
 
-<h2>2. Por qué LATAM es distinto: TV abierta + hub México + nikkei</h2>
-<h3>Chile: el paper que prueba el mecanismo TV → idioma</h3>
-<p>Cabaña Rojas (Ritsumeikan, 2021) documenta Chile: boom de anime en TV nacional desde 1990 + masificación de internet → subida de estudiantes. El gobierno japonés lo usa explícitamente: MOFA 2011 mete <em>lengua + anime + moda</em> como productos “Cool Japan”; MOFA 2021: “más estudiantes por pop-culture y deseo de entender otra cultura”. Japan Foundation crea <em>Japanese in anime &amp; manga</em> (2009), nombra a Doraemon embajador (2008), Abe sale de Mario en Río 2016.</p>
-<h3>México: hub lingüístico y logístico, no solo mercado final</h3>
-<p>JETRO México (2026, vía CLACSO 2026): +130M habitantes, mediana ~30 años, +80% conectividad. Raíz: <em>Saint Seiya</em> y <em>Dragon Ball</em> 70s-80s conectaron con la tradición de telenovela (amistad, lealtad, superación); hoy Dandadan y SPY×FAMILY top streaming + conciertos sinfónicos llenos. México subtitula/dobla y reexporta al resto de la región; Aniplex opera desde Los Ángeles hacia TV Azteca; Sony/Crunchyroll/Netflix dividen licencias EEUU–México. Anime = gateway a manga editorial, giras de artistas, videojuegos y marketing con personajes en AniMole/CCXP/Expo TNT.</p>
-<h3>Brasil (espejo útil aunque sea portugués)</h3>
-<p>JETRO São Paulo (2025): ~3M fans de manga, 3 décadas de TV (Saint Seiya→Naruto→Bleach) + mayor comunidad nikkei fuera de Japón. Netflix/Prime/Crunchyroll sacan del nicho otaku (Dandadan 11 semanas top10 Brasil); mercado +13% anual a 2030. Freno: licencias lentas, falta de doblaje y coordinación local.</p>
-<p>Estrategia estatal detrás: <em>Cool Japan</em> (Cabinet Office 2019): comida y anime como <strong>gateways</strong> → profundizar en historia/tradición/conducta. Meta cuantificada <em>New Cool Japan 2024</em>: <strong>50 billones ¥ en exportaciones de contenido a 2033</strong>. Pero la distribución la controlan EEUU (Crunchyroll de Sony EEUU 2021, Netflix, Amazon): poder suave mediado por plataformas, no solo atractivo cultural (Baker 2025 preprint; CLACSO 2026).</p>
+    <div class="tldr">
+      <article class="tl">
+        <div class="step">01 · LA PUERTA</div>
+        <h3>Entran por el anime</h3>
+        <p>Es el motivo n.º 1 en todas las regiones hispanas, según las escuelas de idiomas.</p>
+        <span class="big num">75–91% <small>de las instituciones lo citan</small></span>
+      </article>
+      <article class="tl">
+        <div class="step">02 · EL GIRO</div>
+        <h3>Ahora quieren ir a Japón</h3>
+        <p>En Sudamérica "estudiar en Japón" saltó de 29% a 71%. "Trabajar en mi país" se desplomó.</p>
+        <span class="big num">29% → 71% <small>Sudamérica, 2021→2024</small></span>
+      </article>
+      <article class="tl">
+        <div class="step">03 · EL MURO</div>
+        <h3>Abandonan por el tiempo</h3>
+        <p>Sin saber kanji, el primer nivel oficial (N5) pide cientos de horas. 2 de cada 3 inscritos al JLPT en México y España van a N5–N4.</p>
+        <span class="big num">325–600 h <small>para el N5</small></span>
+      </article>
+    </div>
 
-<h2>3. Turismo: el motivo “viaje” ya tiene números récord</h2>
-<table class="table">
-<thead><tr><th>Destino</th><th>2024</th><th>2025</th><th>Lectura</th></tr></thead>
-<tbody>
-<tr><td>Mundo → Japón (JNTO)</td><td>36,87M (+47%) gasto ¥8,1 billones</td><td><strong>42,7M (+15,8%)</strong>, primera vez &gt;40M; meta 60M y ¥15 billones en 2030</td><td>84,1% va por turismo/ocio; gasto medio ¥227.000</td></tr>
-<tr><td>México → Japón</td><td>151.800 (+60% vs 2023, +111% vs 2019)</td><td><strong>200.400 (+32%)</strong> récord</td><td>Aeroméxico+ANA directo, yen favorable, familias y XV años, estancias largas, gastronomía regional, belleza/tech</td></tr>
-<tr><td>España → Japón</td><td>182.300 (+57% vs 2023, +40% vs 2019)</td><td><strong>245.600 (+32%)</strong> récord</td><td>Más Hokkaido/Kyushu/Okinawa/Hokuriku/Setouchi; esquí, Naoshima/Kanazawa, Kansai como puerta</td></tr>
-</tbody>
-</table>
-<p>Turismo de peregrinación otaku (<em>seichi junrei</em>): Hakone×Evangelion “Fusion with tradition” (2010), yurukyara regionales multimillonarios. Crítica útil (Santiago Iglesias, UCM 2017): Cool Japan domestica de más; el fan hardcore quiere original, no versión suavizada. Para tu grupo: enseña japonés real de anime + formal, no solo libro.</p>
+    <div class="stats" role="list">
+      <div class="stat" role="listitem"><b class="num">4.000.750</b><span>estudiantes de japonés en el mundo (récord, 2024)</span></div>
+      <div class="stat" role="listitem"><b class="num">42.758</b><span>en 20 países hispanos (≈1% del total, +6% vs 2021)</span></div>
+      <div class="stat" role="listitem"><b class="num">15.151</b><span>en México, n.º 1 hispano</span></div>
+      <div class="stat" role="listitem"><b class="num">53,5</b><span>por cada 100 mil hab. en Paraguay, la tasa más alta</span></div>
+      <div class="stat" role="listitem"><b class="num">200.400</b><span>mexicanos viajaron a Japón en 2025 (+32%)</span></div>
+      <div class="stat" role="listitem"><b class="num">4,1 M</b><span>extranjeros viven en Japón (récord a fin de 2025)</span></div>
+    </div>
+  </div>
+</header>
 
-<h2>4. Trabajo: sí hay, pero concentrado y exigente</h2>
-<p>Ofertas activas 2026 (Bajío): Irapuato traductor JP-ES $60–70k MXN; Silao Puerto Interior (THK, Denso, KYB, Topy, Job Link) N4→N1, 1–3 años automotriz, PPAP/AMEF/APQP, glosarios SGC; San Luis Potosí “Master” N1/N2 3–5 años; Aguascalientes Sumitomo N2-N1 + kanji escrito. Patrón: <strong>licenciatura + japonés 100% + inglés deseable + 2 años planta + presencial</strong>. Fuera del Bajío (ej. Colombia) casi nada: “elegir japonés sobre inglés es terrible idea” salvo hobby.</p>
-<p>Australia (Imura, Griffith): 75% de universitarios de japonés son fans JPC; fans y no-fans igual en “interés idioma/viaje/cultura” (&gt;90%), pero fans mucho más en futuro (seguir en uni 94,8%, trabajar en Japón 70% vs 56,4%). Fans consumen anime en japonés a diario, manga traducido y J-pop; con los años leen más manga en japonés y cantan. Implicación: el fan persiste más si ve futuro concreto (trabajo/beca/estancia).</p>
+<main class="wrap">
 
-<h2>5. Becas: la vía estudio existe pero pide japonés previo</h2>
-<p><strong>MEXT</strong> (desde 1954, 7 modalidades: research, teacher training, undergraduate, Japanese studies, tech college, specialized training, YLP). Undergraduate: 1 año preparatorio (ABK/Osaka U) + examen entrada; exige 12 años escolaridad, aprender japonés y puente de amistad. <strong>Japanese Studies 1 año</strong>: solo si ya llevas 1+ año de japonés/cultura en uni y clases en japonés. El formulario pregunta literal: <em>¿qué te hizo interesarte por Japón? ¿qué aportarás a Japón y tu país?</em> + JLPT/EJU + TOEFL/IELTS.</p>
-<p><strong>JICA Nikkei LATAM-Caribe</strong>: hasta 3ª generación, &lt;40 años, graduado, admitido a posgrado en Japón, japonés para vida diaria, “puente / co-creación” con comunidad nikkei. Ideal para Perú/Brasil/MX/AR con descendencia.</p>
+<!-- ===================== 1. CUÁNTOS ===================== -->
+<section class="block" id="cuantos">
+  <div class="sec-head"><div class="sec-no">01</div><h2>¿Cuántos hispanos estudian japonés?</h2><div class="kanji" aria-hidden="true">数</div></div>
+  <p class="answer"><b>En corto:</b> unos <strong>43 mil</strong> en academias, universidades y colegios de 20 países hispanos. México y España suman el 58%. Y es solo la punta: no cuenta a quienes estudian solos con apps, YouTube o anime.</p>
 
-<h2>6. Dolores profundos (por qué abandonan al mes)</h2>
-<table class="table">
-<thead><tr><th>Dolor</th><th>Detalle técnico</th><th>Qué dicen</th></tr></thead>
-<tbody>
-<tr><td><strong>FSI Cat. IV + sin inmersión</strong></td><td>2.200 h / 88 sem full-time a ILR-3; japonés marcado “más duro que otros Cat. IV”; a 5h/sem ≈ 8,5 años; sin inmersión más. Español Cat. I ≈ 600h.</td><td>“¿vale 8 años para hobby vs inglés?”</td></tr>
-<tr><td><strong>Escritura triple</strong></td><td>46 hiragana + 46 katakana + ~2.000 joyo (de 50.000; +10.000 en uso); 60% con 2+ lecturas on/kun; nativos 9 años obligatorios + superior. Confusión シツソン, múltiples kanji misma lectura.</td><td>“olvidé N3/N2”, “prisión Anki/WaniKani”, “escribir nativo es el mayor obstáculo adulto” (Heisig)</td></tr>
-<tr><td><strong>Gramática SOV + partículas + contexto cero-sujeto</strong></td><td>verbo al final (retentiva), は/が/を, tópico, aglutinación, turnos y cortesía que evita confrontación; se omite lo sobreentendido.</td><td>“muro de partículas”, “tengo que esperar al final”</td></tr>
-<tr><td><strong>Keigo real ≠ libro</strong></td><td>teineigo (masu) vs sonkeigo (irassharu/meshiagaru) vs kenjougo (mairu/itadaku); mala enseñanza hasta intermedio; hasta nativos fallan por sobrecorrección en restaurantes.</td><td>“doko kara → dochira kara irasshaimasu ka y quedé patidifuso”</td></tr>
-<tr><td><strong>Vocabulario/modismos enormes</strong></td><td>con 1.000 palabras: ~80% francés vs ~60% japonés; 気 con decenas de modismos; mizu/yu, hige sin distinción; préstamos y neologismos constantes.</td><td>“siento que no avanzo años”</td></tr>
-<tr><td><strong>Todo en inglés + Minna arcaico</strong></td><td>Genki, WaniKani, CosCom, LingoDeer en inglés y de pago tras niveles; Marugoto/Minna desactualizados; 28,5% escasez material, 23,9% info inexacta.</td><td>“si no sé inglés estoy frito”</td></tr>
-<tr><td><strong>Tiempo/erosión/meseta kana</strong></td><td>N5 325–600 h; subidón “¡leo hiragana!” semana 1 → meseta; SRS odiado; olvidar es parte del proceso pero duele.</td><td>“cansado tras trabajo”, “evito japonés como plaga, no reconozco 90%”</td></tr>
-<tr><td><strong>Sin uso/partner + cursos lentos</strong></td><td>pocas horas por ser lengua minor; japonés clase vs anime; compañero arrastra malos hábitos; presencial caro/lejos.</td><td>“sin uso real imposible mantener”</td></tr>
-</tbody>
-</table>
-<div class="note">Ventaja hispana real pero parcial: fonología (5 vocales, sílaba abierta) ayuda a pronunciar (Cao et al. 2012; review 6 meses 2026: “casi sin acento vs anglos”), pero no salva kanji/keigo. El inglés ayuda en vocabulario (préstamos) y sintaxis (Tanimori &amp; Sato; Ohso), por eso el “puente inglés” solo renta desde N5.</div>
+  <div class="chart-card" id="chartCountries">
+    <div class="chart-top">
+      <div>
+        <p class="chart-title" id="ccTitle">Estudiantes de japonés en instituciones, 2024</p>
+        <p class="chart-cap">Japan Foundation, encuesta 2024. Brasil en gris solo como referencia (habla portugués).</p>
+      </div>
+      <div class="seg" role="group" aria-label="Métrica">
+        <button type="button" data-mode="total" aria-pressed="true">Total</button>
+        <button type="button" data-mode="rate" aria-pressed="false">Por 100 mil hab.</button>
+        <button type="button" data-mode="chg" aria-pressed="false">Cambio vs 2021</button>
+      </div>
+    </div>
+    <div class="bars" id="ccBars"></div>
+    <details class="tbl"><summary>Ver como tabla</summary><div class="table-scroll" id="ccTable"></div></details>
+  </div>
 
-<h2>7. Dónde están (para reclutar)</h2>
-<ul>
-<li><strong>Discord ES:</strong> Unagibun (más grande LATAM, reuniones diarias), Toshokan ES-JP (intercambio diario), Manabe (inmersión + drills kana + mocks JLPT), Nihongo no Torii, Intercambio JP-ES (intercambio.jp).</li>
-<li><strong>Telegram:</strong> Japonés desde cero hasta N4 (~2.274 miembros, anti-spam).</li>
-<li><strong>Reddit:</strong> r/aprendojapones + r/aprenderjapones (pequeños 100% target), r/LearnJapanese (enorme, inglés), r/mexico, r/AskArgentina, r/AskChile, r/RedditPregunta.</li>
-<li><strong>Apps:</strong> HelloTalk/Tandem/HiNative Moments; comunidadjapon.academy (+20 países).</li>
-</ul>
+  <div class="grid-3">
+    <div class="card ai"><span class="tagline">México</span><h3>Líder, y concentrado en el Bajío</h3><p>Tiene el 85% de los alumnos de Centroamérica y el Caribe. Aguascalientes ya es el <strong>2.º estado con más escuelas</strong> (detrás de CDMX), arrastrado por las empresas japonesas. Hay japonés en 28 de 32 estados.</p></div>
+    <div class="card matcha"><span class="tagline">Paraguay</span><h3>La sorpresa: +159%</h3><p>Pasó de 1.262 a 3.269 alumnos y tiene la mayor tasa per cápita de toda la región. Lo explican sus colonias japonesas (Pirapó, Iguazú, Encarnación) y el japonés en primaria.</p></div>
+    <div class="card kin"><span class="tagline">España</span><h3>Crece por autodidactas</h3><p>España es el país de Europa con más usuarios de la plataforma gratuita <em>Minato</em> de la Japan Foundation. Desde 2023 Cataluña ofrece japonés optativo en institutos públicos: 21 → 251 alumnos de secundaria.</p></div>
+    <div class="card accent"><span class="tagline">Colombia</span><h3>Baja: −17%</h3><p>Menos profesores. Los alumnos se concentran en Bogotá, Medellín y Cali, mientras el Instituto Confucio (chino) y el King Sejong (coreano) crecen con fuerza.</p></div>
+    <div class="card accent"><span class="tagline">Perú</span><h3>Baja: −5,6%</h3><p>Tiene unos 200 mil nikkei (descendientes de japoneses), pero cada vez menos aprenden el idioma. Las universidades no lo dan como materia regular, solo en centros de idiomas.</p></div>
+    <div class="card ai"><span class="tagline">Patrón común</span><h3>Fuera del colegio</h3><p>La mayoría estudia fuera del sistema escolar: <strong>69%</strong> en Centroamérica, <strong>60%</strong> en Sudamérica y <strong>79%</strong> en España. Y es online: 58% de las instituciones sudamericanas dan clases en línea, frente al 31% global.</p></div>
+  </div>
 
-<h2>8. Qué implica para tu grupo abierto gratis 2h/sem (sin prometer días)</h2>
-<ul>
-<li>Promesa: <em>hiragana + katakana + frases anime en español, 15 min/día + 2h vivo, sin inglés previo</em>. Nada de “en 14 días”.</li>
-<li>Retención: 1 kana/día + 1 frase anime + voice semanal leyendo; corrección fotos de planas; grabaciones.</li>
-<li>Gap hacia pago: kanji/arnés N5, partículas, conversación, plan + certificado + grupos chicos. Pitch 30 seg al final.</li>
-<li>Captación: post fundador “comenta YO + vota horario” → form 30 seg (país/días/bloque/nivel/motivo) → Discord. Sin form largo.</li>
-</ul>
+  <div class="chart-card" style="margin-top:18px" id="chartJLPT">
+    <div class="chart-top">
+      <div>
+        <p class="chart-title">Inscritos al examen oficial JLPT en 2024 (julio + diciembre)</p>
+        <p class="chart-cap">JLPT, datos oficiales por sede. Es la señal de quién va en serio.</p>
+      </div>
+    </div>
+    <div class="bars" id="jlptBars"></div>
+    <div class="note" style="margin-bottom:6px">En México, <b>71%</b> de los inscritos de diciembre fueron a N5 o N4 (los dos niveles básicos). En España, 64%. En el mundo hubo <b>≈1,72 millones</b> de inscritos en 2024.</div>
+  </div>
+</section>
 
-<h2>9. Metodología y límites</h2>
-<p>Triangulación: encuestas Japan Foundation 2012–2024 (a instituciones, no a alumnos directos), TFG/papers España-Colombia-Australia-Chile, ofertas laborales MX 2026, datos JNTO/Forbes/Europapress, guidelines MEXT/JICA/FSI, threads Reddit y comunidades Discord/Telegram. <strong>Límite:</strong> foros = sesgo fan; JF excluye autodidactas (TV/radio/internet puros); empleo = foto Bajío 2026, no censo; turismo post-COVID anómalo por yen débil.</p>
+<!-- ===================== 2. POR QUÉ ===================== -->
+<section class="block" id="porque">
+  <div class="sec-head"><div class="sec-no">02</div><h2>¿Por qué lo estudian?</h2><div class="kanji" aria-hidden="true">理由</div></div>
+  <p class="answer"><b>En corto:</b> anime y gusto por el idioma, en ese orden y en todas partes. Lo nuevo de 2024: en Latinoamérica se desplomó el motivo "me sirve para trabajar aquí" y subió "quiero ir a Japón".</p>
 
-<h2>10. Fuentes (36)</h2>
-<ol class="src">
-<li>Japan Foundation (2025). <em>Survey on Japanese-Language Education Abroad 2024</em> — resumen, tablas, capítulos. <a href="https://www.jpf.go.jp/e/project/japanese/survey/result/information.html">jpf.go.jp 2024</a> · <a href="https://www.jpf.go.jp/e/project/japanese/survey/result/information/dl/overview_of_survey_results_en.pdf">overview PDF</a> · <a href="https://www.jpf.go.jp/e/project/japanese/survey/result/information/dl/western_europe_en.pdf">Western Europe PDF (85,5% anime)</a></li>
-<li>Japan Foundation (2021). <em>Survey Report 2021 + preface formularios 13–17 motivos</em>. <a href="https://www.jpf.go.jp/e/project/japanese/survey/result/survey21.html">survey21</a> · <a href="https://www.jpf.go.jp/e/project/japanese/survey/result/dl/survey2021/Text_r2.pdf">Text_r2 PDF</a></li>
-<li>Velloso Mataix, G. (2022). <em>Nuevos enfoques enseñanza japonés era digital</em>. TFG Sevilla. <a href="https://idus.us.es/handle/11441/144065">idus 144065</a> — anime→cultura→idioma, umbral/punto no retorno, SRS, falta español.</li>
-<li>Lorente Garcia, E. (2020). <em>Motivation and strategies: Japanese in Barcelona</em>. <a href="https://hdl.handle.net/2445/171210">hdl 2445/171210</a> — 95% cultura, 80% productos, 40% vivir, 35% amigos/trabajo.</li>
-<li>Ito-Morales, K. (2019). <em>Estado actual y desafío TIC en japonés LE</em>. <a href="https://doi.org/10.30827/digibug.58479">doi digibug.58479</a> — cortesía/kanji, confusión anime vs clase.</li>
-<li>Inagán Galviz, M. (2023). <em>BUNTABI kanji A2.1-A2.2 Cali</em>. <a href="https://repositorio.uniajc.edu.co/handle/uniajc/1851">uniajc 1851</a> — JF 2012 28,5%/26,1%/23,9%; on/kun, furigana, orden trazos.</li>
-<li>Imura, T. <em>Portrait of J-pop culture fans studying Japanese (Australia)</em>. Griffith. <a href="https://research-repository.griffith.edu.au/server/api/core/bitstreams/2660eb83-4d11-4df0-a268-be24d763cf63/content">griffith PDF</a> — 75% fans, fans persisten más, top: anime JP + J-pop + videojuegos.</li>
-<li>Cabaña Rojas, I. (2021). <em>Rethinking pop culture in Japan’s soft power in Chile</em>. <a href="https://www.japanesestudies.org.uk/ejcjs/vol21/iss3/cabana_rojas.html">ejcjs</a> — TV 90s + Cool Japan/MOFA.</li>
-<li>Cabinet Office Japan (2019). <em>Cool Japan Strategy</em>. <a href="https://www.cao.go.jp/cool_japan/english/main_document_2019.pdf">cao PDF</a> — gateways vs depth, meta 50 billones ¥ 2033 (2024).</li>
-<li>Baker, M.A. (2025). <em>Japan’s Pop Culture Soft Power (preprint)</em>. <a href="https://jxiv.jst.go.jp/index.php/jxiv/preprint/download/1525/3980/3869">jxiv PDF</a> — plataformas + fans mandan; Crunchyroll 15M+; estudios capturan poco.</li>
-<li>Paredes, M. / CLACSO (2026). <em>Soft power Japón en LATAM: diplomacia corporativa</em>. <a href="https://www.clacso.org/en/el-poder-suave-de-japon-en-america-latina-diplomacia-corporativa-bajo-la-sombra-de-la-hegemonia-estadounidense/">clacso</a> — JETRO Brasil/México, hub doblaje, festivales.</li>
-<li>Santiago Iglesias, J.A. (2017). <em>Japón imaginado. Imaginario manganime y peregrinación</em>. <a href="https://revistas.ucm.es/index.php/MIRA/en/article/download/57116/51550/114636">UCM PDF</a> — seichi junrei, Hakone×Evangelion, Cool Japan domestica.</li>
-<li>Cool Japan (Wikipedia, panorama + críticas fondo ¥50bn, pérdidas ¥10bn, Gackt). <a href="https://en.wikipedia.org/wiki/Cool_Japan">wikipedia</a></li>
-<li>JNTO vía JTB (2025). <em>Viajes 2024: 36,87M + ¥8,1 billones</em>. <a href="https://www.jtb.or.jp/book/wp-content/uploads/sites/4/2025/10/nenpo2025_2_1.pdf">jtb PDF</a></li>
-<li>Europapress (2025). <em>Japón 36,8M récord 2024</em>. <a href="https://www.europapress.es/turismo/nacional/noticia-japon-bate-nuevo-record-turistas-gasto-2024-368-millones-visitantes-50836-millones-euros-20250116171510.html">europapress</a> — España 182.300.</li>
-<li>Japón desde Japón (2026). <em>42,7M en 2025</em>. <a href="https://japondesdejapon.com/2026/01/25/record-de-42-7-millones-de-visitantes-internacionales-en-japon-durante-el-2025/">japondesdejapon</a></li>
-<li>Forbes México (2026). <em>200.400 mexicanos en 2025 (+32%)</em>. <a href="https://forbes.com.mx/2025-el-ano-que-marco-record-de-turistas-mexicanos-en-japon/">forbes</a> · Amaviajar 2024: <a href="https://www.amaviajar.com.mx/2025/01/15/cifras-record-mas-de-151-mil-mexicanos-visitaron-japon-en-2024/">151.800</a> · Rev101 2025: <a href="https://rev101.com/2026/01/japon-consolida-su-atractivo-entre-los-viajeros-mexicanos-y-alcanza-cifra-historica-de-visitantes-en-2025/">detalle</a></li>
-<li>Ladevi España (2026). <em>245.600 españoles 2025 + diversificación</em>. <a href="https://espana.ladevi.info/negocios/japon-consolida-su-atractivo-el-mercado-espanol-y-proyecta-mayor-diversificacion-regional-2026-n95239">ladevi</a></li>
-<li>FSI (State Dept). <em>Cat. IV japonés 2.200 h / 88 sem</em>. <a href="https://2009-2017.state.gov/m/fsi/sls/orgoverview/languages">state.gov</a> · explicación: <a href="https://chrysanthemum.commons.gc.cuny.edu/2021/05/is-japanese-a-really-difficult-language-the-u-s-department-of-state-thinks-so/">CUNY</a> · <a href="https://hourstolearnalanguage.com/hours/japanese/">2200h (5h/sem=8,5 años)</a> · <a href="https://hourstolearnalanguage.com/difficulty/japanese/">dificultad</a></li>
-<li>MEXT / Study in Japan: <em>7 becas desde 1954</em> <a href="https://www.studyinjapan.go.jp/en/planning/scholarships/about-scholarships/">overview</a> · <em>Undergraduate guideline</em> <a href="https://www.mext.go.jp/content/20260420-mxt-kotokoku01-000049232_02.pdf">MEXT PDF</a> · <em>Japanese Studies 2026</em> <a href="https://www.mext.go.jp/content/20251222-mxt-kotokoku01-000046488_02.pdf">MEXT PDF</a> · <em>UTokyo MEXT</em> <a href="https://www.u-tokyo.ac.jp/en/prospective-students/mext_scholarship.html">utokyo</a></li>
-<li>JICA (2026). <em>Beca Nikkei LATAM-Caribe (hasta 3ª gen, &lt;40)</em>. <a href="https://www.scribd.com/document/1075730330/FY2026ApplicationGuide">guide</a></li>
-<li>Empleo Bajío 2026: Nikkei Irapuato <a href="https://es.linkedin.com/posts/nikkei-business-mexico_vacante-empleo-traductor-activity-7476288183324946433-LRJ9">60–70k</a> · Cámara Japonesa <a href="https://japon.org.mx/ja/cb-profile/562-hitachiqro239.html">bolsa</a> · A’S Japan SLP <a href="https://es.linkedin.com/posts/a-s-japan-mexico_vacante-disponible-traductor-master-de-japones-espa%C3%B1ol-activity-7440467934499536896-93F4">Master N1/N2</a> · THK Silao <a href="https://empleo24.mx/traductor-tecnico_guanajuato-c315533/2026-09-thk-rhythm-mexicana-s-a-de-c-v_i4212139142">técnico</a> · Joblink Silao <a href="https://mx.bebee.com/job/3105c1879d92be78a21694e62ca9a712">$55k N3+</a></li>
-<li>r/mexico (2020) público interesado. <a href="https://www.reddit.com/r/mexico/comments/i8h84h/cu%C3%A1l_creen_ustedes_que_es_el_p%C3%BAblico_interesado/">reddit</a> · r/aprendojapones (2022) cómo/por qué. <a href="https://www.reddit.com/r/aprendojapones/comments/vbl6o2/c%C3%B3mo_y_por_qu%C3%A9_estudiar_japon%C3%A9s/">reddit</a></li>
-<li>r/aprenderjapones (2024) solo verbal anime/J-pop. <a href="https://www.reddit.com/r/aprenderjapones/comments/1c2d5ap/quiero_aprender_japones_pero/">reddit</a> · r/AskArgentina (2025) autodidacta diario. <a href="https://www.reddit.com/r/AskArgentina/comments/1hw9ryy/compatriotas_que_aprendieron_a_hablar_japones/">reddit</a></li>
-<li>r/LearnJapanese (2024) por qué abandonan. <a href="https://www.reddit.com/r/LearnJapanese/comments/1amvbk7/why_do_so_many_japanese_learners_quit_or_become/">reddit</a> · r/RedditPregunta (2024) viable Colombia. <a href="https://www.reddit.com/r/RedditPregunta/comments/1ggqxxf/es_viable_aprender_japones/">reddit</a> · r/AskChile (2026) autodidacta + Genki vs Minna. <a href="https://www.reddit.com/r/AskChile/comments/1rc9pxu/estoy_tratando_de_aprender_japon%C3%A9s_por_mi_cuenta/">reddit</a></li>
-<li>Perelló (2024) keigo. <a href="https://jlperello.com/blog/2024/11/06/el-lenguaje-de-cortesia-japones/">jlperello keigo</a> · (2025) vocabulario/modismos. <a href="https://jlperello.com/blog/2025/07/10/dificultades-del-japones-vi-refranes-modismos-y-vocabulario/">jlperello vocab</a> · Japonés-Online SOV/kana/kanji. <a href="https://www.japones-online.com/post/aprender-japones-es-dificil">japones-online</a></li>
-<li>GoGoNihon 5 razones. <a href="https://gogonihon.com/es/blog/5-razones-para-aprender-japones/">gogonihon</a> · EF 4 razones. <a href="https://www.ef.com/wwes/blog/language/por-que-aprender-japones/">ef</a> · Kansei kanji hispanos. <a href="https://kansei.app/kanji-japones-para-hispanohablantes/">kansei</a></li>
-<li>Comunidades: Unagibun <a href="https://discord.com/servers/unagibunaprendamos-japones-593244850787319824">discord</a> · Toshokan <a href="https://discord.com/servers/toshokanes-jpyan-yu-jiao-huan-802980826181926954">discord</a> · Manabe <a href="https://discord.com/servers/manabe-xue-be-654351832734498836">discord</a> · Telegram N4 <a href="https://t.me/japonesdesdecerohastan4">telegram</a></li>
-</ol>
-<p class="src">Cita libre con link. Para venta: “encuestas a instituciones + foros + foto laboral 2026, no censo oficial”.</p>
-</div>
-<footer class="app-footer">v2 profunda · <a href="../">Índice</a></footer>
+  <div class="chart-card" id="chartMotives">
+    <div class="chart-top">
+      <div>
+        <p class="chart-title">Motivos para aprender japonés, 2024</p>
+        <p class="chart-cap">% de instituciones que citan cada motivo (respuesta múltiple). Japan Foundation 2024.</p>
+      </div>
+      <div class="seg" role="group" aria-label="Región">
+        <button type="button" data-region="ca" aria-pressed="true">Centroamérica (≈México)</button>
+        <button type="button" data-region="sa" aria-pressed="false">Sudamérica</button>
+        <button type="button" data-region="world" aria-pressed="false">Mundo</button>
+      </div>
+    </div>
+    <div class="bars" id="motBars"></div>
+  </div>
+
+  <h3 style="font-size:22px;margin:28px 0 4px">El giro: de "usarlo aquí" a "irme allá"</h3>
+  <div class="shift">
+    <div class="side"><div class="k">Trabajo en mi país · Centroamérica</div><div class="v num"><span class="from">85%</span>34,5%</div><p>Era el 3.er motivo en 2021; en 2024 cayó al 7.º lugar.</p></div>
+    <div class="arrow" aria-hidden="true">→</div>
+    <div class="side"><div class="k">Estudiar en Japón · Sudamérica</div><div class="v num"><span class="from">29%</span>71%</div><p>Ahora es el 4.º motivo, por encima del turismo (69%).</p></div>
+  </div>
+  <p class="note">En Sudamérica "trabajo en mi país" también bajó (de 74% a 33%). Lectura práctica: <b>vende el japonés como pasaporte a Japón</b> (viajar, estudiar, working holiday, trabajar allá), no como ventaja laboral local. La excepción es el Bajío mexicano.</p>
+
+  <div class="grid-2">
+    <div class="card"><span class="tagline">Europa Occidental</span><h3>85,5% anime</h3><p>En el capítulo de Europa Occidental, el anime/manga/J-pop es el motivo principal (85,5%), seguido de interés en el idioma (80,1%) e historia y arte (77,1%). En Barcelona, 95% citan la cultura (Lorente 2020).</p></div>
+    <div class="card"><span class="tagline">Australia · dato útil</span><h3>El fan persiste más</h3><p>75% de los universitarios de japonés son fans de la cultura pop. Fans y no-fans se parecen en interés por viajar (&gt;90%), pero los fans proyectan más futuro: 70% quieren trabajar en Japón vs 56%. <strong>El fan aguanta si ve un futuro concreto.</strong></p></div>
+  </div>
+  <p class="note"><b>Ojo con el dato:</b> la Japan Foundation encuesta a <b>escuelas</b>, no a alumnos. Es "qué motivos ven las escuelas", no una encuesta individual. Tampoco cuenta a los autodidactas puros.</p>
+</section>
+
+<!-- ===================== 3. ANIME ===================== -->
+<section class="block" id="anime">
+  <div class="sec-head"><div class="sec-no">03</div><h2>La puerta de entrada: anime en TV abierta</h2><div class="kanji" aria-hidden="true">門</div></div>
+  <p class="answer"><b>En corto:</b> Latinoamérica es distinta porque el anime llegó <strong>gratis por TV abierta</strong> desde los 70–80, con doblaje latino. Japón lo usa a propósito como política de Estado ("Cool Japan").</p>
+
+  <ol class="timeline">
+    <li><span class="y">70s–80s</span><div class="t"><b>Saint Seiya y Dragon Ball en TV abierta.</b> <span>Conectan con la telenovela latina: amistad, lealtad, superación.</span></div></li>
+    <li><span class="y">1990s</span><div class="t"><b>Boom en Chile.</b> <span>El anime en TV nacional y luego internet hacen subir los estudiantes de japonés (Cabaña Rojas, 2021).</span></div></li>
+    <li><span class="y">2008</span><div class="t"><b>Doraemon, "embajador del anime".</b> <span>Japón convierte el pop en diplomacia.</span></div></li>
+    <li><span class="y">2009</span><div class="t"><b>"Japanese in Anime &amp; Manga".</b> <span>La Japan Foundation crea material oficial para enseñar japonés con anime.</span></div></li>
+    <li><span class="y">2015</span><div class="t"><b>Programa de contenidos para LATAM.</b> <span>La Fundación Japón distribuye anime, dramas y documentales a TV latinoamericana.</span></div></li>
+    <li><span class="y">2016</span><div class="t"><b>Abe vestido de Mario en Río.</b> <span>Cierre olímpico como vitrina de soft power.</span></div></li>
+    <li><span class="y">2021</span><div class="t"><b>Sony compra Crunchyroll.</b> <span>La distribución pasa a plataformas desde EE. UU. (Crunchyroll, Netflix, Amazon).</span></div></li>
+    <li><span class="y">2024</span><div class="t"><b>"New Cool Japan".</b> <span>Meta oficial: 50 billones de yenes en exportaciones de contenido para 2033.</span></div></li>
+    <li><span class="y">2025</span><div class="t"><b>Japonés, 4.º idioma de Duolingo.</b> <span>Supera al alemán a nivel mundial.</span></div></li>
+  </ol>
+
+  <div class="grid-3" style="margin-top:20px">
+    <div class="card"><span class="tagline">México</span><h3>El hub de la región</h3><p>México dobla y subtitula y luego reexporta al resto de LATAM. Dandadan y SPY×FAMILY encabezan el streaming. Los conciertos sinfónicos de anime se llenan. El anime abre la puerta al manga, los videojuegos y los eventos (CCXP, Expo TNT).</p></div>
+    <div class="card"><span class="tagline">Brasil · espejo</span><h3>3 M de fans de manga</h3><p>Tres décadas de anime en TV, más la mayor comunidad nikkei fuera de Japón. Crece 13% anual hacia 2030. Lo frenan las licencias lentas y la falta de doblaje.</p></div>
+    <div class="card"><span class="tagline">La crítica</span><h3>El fan quiere lo auténtico</h3><p>Cool Japan "suaviza" la cultura para exportarla, pero el fan serio quiere el original (Santiago Iglesias, UCM 2017). <strong>Para enseñar:</strong> japonés real de anime junto al formal, no solo el libro de texto.</p></div>
+  </div>
+</section>
+
+<!-- ===================== 4. VIAJE ===================== -->
+<section class="block" id="viaje">
+  <div class="sec-head"><div class="sec-no">04</div><h2>Viajar: el motivo con récords</h2><div class="kanji" aria-hidden="true">旅</div></div>
+  <p class="answer"><b>En corto:</b> el turismo a Japón rompe récords. El yen está débil, hay vuelo directo desde México y casi todos los hispanos entran sin visa (Colombia es la excepción).</p>
+
+  <div class="chart-card" id="chartTravel">
+    <div class="chart-top"><div><p class="chart-title">Visitantes a Japón por año</p><p class="chart-cap">JNTO vía prensa (Forbes MX, Ladevi, Europapress).</p></div></div>
+    <div class="bars" id="travelBars"></div>
+  </div>
+  <div class="grid-3">
+    <div class="card"><span class="tagline">Mundo</span><h3 class="num">42,7 M en 2025</h3><p>Primera vez por encima de 40 M (+15,8%). El 84% va por ocio. Meta oficial: 60 M y ¥15 billones en 2030.</p></div>
+    <div class="card"><span class="tagline">México</span><h3 class="num">200.400 (+32%)</h3><p>Vuelo directo Aeroméxico/ANA. Familias, viajes de XV años, estancias largas, comida regional, belleza y tecnología.</p></div>
+    <div class="card"><span class="tagline">España</span><h3 class="num">245.600 (+32%)</h3><p>Se diversifica hacia Hokkaido, Kyushu, Okinawa, Hokuriku y Setouchi. Esquí, arte en Naoshima y Kansai como puerta de entrada.</p></div>
+  </div>
+
+  <h3 style="font-size:20px;margin:26px 0 10px">¿Necesito visa para ir de turista?</h3>
+  <div class="visa-grid">
+    <div class="visa"><b>México</b><span class="badge ok">Sin visa</span></div>
+    <div class="visa"><b>España</b><span class="badge ok">Sin visa</span><span class="badge wh">Working holiday</span></div>
+    <div class="visa"><b>Argentina</b><span class="badge ok">Sin visa</span><span class="badge wh">Working holiday</span></div>
+    <div class="visa"><b>Chile</b><span class="badge ok">Sin visa</span><span class="badge wh">Working holiday</span></div>
+    <div class="visa"><b>Uruguay</b><span class="badge ok">Sin visa</span><span class="badge wh">Working holiday</span></div>
+    <div class="visa"><b>Perú</b><span class="badge ok">Sin visa desde jul 2025</span></div>
+    <div class="visa"><b>Colombia</b><span class="badge no">Requiere visa</span><span style="display:block;font-size:12.5px;color:var(--ink-3);margin-top:4px">Gratuita, con cita previa</span></div>
+  </div>
+  <p class="note"><b>Turismo otaku (<i>seichi junrei</i>):</b> visitar los lugares reales de un anime, como Hakone con Evangelion. Es un buen gancho de clase: "aprende lo que vas a leer en los carteles del lugar de tu anime".</p>
+</section>
+
+<!-- ===================== 5. TRABAJO ===================== -->
+<section class="block" id="trabajo">
+  <div class="sec-head"><div class="sec-no">05</div><h2>Trabajo: sí hay, pero concentrado</h2><div class="kanji" aria-hidden="true">仕事</div></div>
+  <p class="answer"><b>En corto:</b> hay dos mercados reales. <strong>El Bajío mexicano</strong> (fábricas japonesas, pide N3 o más) y <strong>Japón mismo</strong>, que tiene escasez de mano de obra y abre visas desde el N4. Fuera de eso, el japonés solo no da empleo: va mejor junto al inglés.</p>
+
+  <div class="grid-3">
+    <div class="card ai"><span class="tagline">México</span><h3 class="num">≈1.600 establecimientos japoneses</h3><p>Unos <strong>700 en el Bajío</strong> y más de 300 en Guanajuato (datos de la cancillería japonesa, oct 2024), sobre todo automotriz: Toyota, Denso, THK, KYB, Sumitomo…</p></div>
+    <div class="card ai"><span class="tagline">Japón</span><h3 class="num">390.296 trabajadores SSW</h3><p>La visa de <em>Trabajador con Habilidades Específicas</em> (Tokutei Ginō) creció 37% en un año. Pide <strong>JLPT N4 o JFT-Basic A2</strong> más un examen del oficio.</p></div>
+    <div class="card ai"><span class="tagline">Working holiday</span><h3>España, Argentina, Chile, Uruguay</h3><p>De 18 a 30 años, hasta 1 año viviendo y trabajando en Japón. México, Colombia y Perú <strong>no</strong> tienen este acuerdo.</p></div>
+  </div>
+
+  <h3 style="font-size:22px;margin:28px 0 6px">La escalera: qué abre cada nivel</h3>
+  <p class="sec-sub" style="margin-bottom:12px">Las horas son estimaciones para quien no sabe kanji (encuesta JLEC, autorreportadas). Los requisitos salen de vacantes reales de 2026 y de reglas de visa.</p>
+  <div class="ladder" id="ladder">
+    <div class="rung"><div class="lv" style="background:#8c3b2f">N1<small>experto</small></div><div class="body"><b>Traductor "Master", puestos de coordinación</b> <span class="hrs">· 3.000–4.800 h</span><p>Vacantes en San Luis Potosí piden N1/N2 y 3–5 años. Con N1, en Japón se suman puntos a la visa de profesional altamente calificado.</p></div></div>
+    <div class="rung"><div class="lv" style="background:#a6442f">N2<small>fluido</small></div><div class="body"><b>Oficina en Japón, Sumitomo en Aguascalientes</b> <span class="hrs">· 1.600–2.800 h</span><p>Es el umbral típico de empleo corporativo en Japón y de traducción técnica con kanji escrito.</p></div></div>
+    <div class="rung"><div class="lv" style="background:#b8552f">N3<small>intermedio</small></div><div class="body"><b>Traductor de planta en el Bajío: $55–70k MXN/mes</b> <span class="hrs">· 950–1.700 h</span><p>Irapuato, Silao (Puerto Interior): N3+ con licenciatura, 2 años en planta, PPAP/AMEF/APQP, presencial. En Japón, algunos oficios SSW (taxi, bus, tren) piden N3.</p></div></div>
+    <div class="rung"><div class="lv" style="background:#c9733a">N4<small>básico</small></div><div class="body"><b>Visa SSW para trabajar en Japón</b> <span class="hrs">· 575–1.000 h</span><p>Cuidado de personas, hostelería, construcción, agro, manufactura… Es la puerta laboral más baja. Algunas vacantes del Bajío aceptan N4 como entrada.</p></div></div>
+    <div class="rung"><div class="lv" style="background:#a87420">N5<small>inicial</small></div><div class="body"><b>Viajar mejor, leer kana, base para todo</b> <span class="hrs">· 325–600 h</span><p>Útil para el viaje y la autoestima. No da empleo por sí solo. Es la meta realista de un primer año serio.</p></div></div>
+  </div>
+
+  <p class="note" style="margin-top:16px"><b>Fuera del Bajío</b> (por ejemplo, en Colombia) casi no hay vacantes con japonés. En foros lo dicen claro: "elegir japonés sobre inglés es terrible idea" salvo que sea por gusto o para irte a Japón. Recomendación honesta: <b>inglés + japonés</b>, no japonés en vez de inglés.</p>
+</section>
+
+<!-- ===================== 6. ESTUDIO / BECAS ===================== -->
+<section class="block" id="estudio">
+  <div class="sec-head"><div class="sec-no">06</div><h2>Estudiar en Japón: becas y raíces nikkei</h2><div class="kanji" aria-hidden="true">学</div></div>
+  <p class="answer"><b>En corto:</b> es el motivo que más crece. Las becas existen pero <strong>premian a quien ya empezó</strong>: piden japonés previo o al menos un interés documentado.</p>
+  <div class="grid-2">
+    <div class="card matcha"><span class="tagline">Gobierno japonés · desde 1954</span><h3>Beca MEXT</h3><p>7 modalidades: investigación, formación docente, pregrado, estudios japoneses, colegio técnico, formación especializada y YLP. <strong>Pregrado:</strong> 1 año de preparatorio de idioma más examen. <strong>Estudios Japoneses (1 año):</strong> solo si ya llevas 1+ año de japonés en la universidad. El formulario pregunta: <em>"¿qué te hizo interesarte por Japón?, ¿qué aportarás?"</em></p></div>
+    <div class="card matcha"><span class="tagline">JICA</span><h3>Beca Nikkei LATAM y Caribe</h3><p>Para descendientes hasta la 3.ª generación, menores de 40, graduados y admitidos a un posgrado en Japón, con japonés para la vida diaria. Pensada para hacer de "puente" con la comunidad nikkei.</p></div>
+  </div>
+  <div class="grid-3" style="margin-top:14px">
+    <div class="card"><span class="tagline">Perú</span><h3 class="num">≈200.000 nikkei</h3><p>Estimación de la Asociación Peruano Japonesa (antes se decía 100 mil). La 2.ª comunidad de Sudamérica después de Brasil.</p></div>
+    <div class="card"><span class="tagline">En Japón (2025)</span><h3 class="num">211.229 brasileños · 49.220 peruanos</h3><p>Los hijos de los <em>dekasegi</em> crecieron en Japón. Algunos volvieron a Perú y tuvieron que aprender español.</p></div>
+    <div class="card"><span class="tagline">El matiz</span><h3>Herencia ≠ idioma</h3><p>En Perú y Brasil la enseñanza pasó de "lengua de herencia" a "lengua extranjera": muchos jóvenes nikkei ya no lo hablan. En Sudamérica, el motivo "herencia" sigue en 55%.</p></div>
+  </div>
+</section>
+
+<!-- ===================== 7. DIFÍCIL ===================== -->
+<section class="block" id="dificil">
+  <div class="sec-head"><div class="sec-no">07</div><h2>Lo difícil: por qué abandonan</h2><div class="kanji" aria-hidden="true">壁</div></div>
+  <p class="answer"><b>En corto:</b> el japonés está en la categoría más difícil para angloparlantes (FSI Cat. IV, ≈2.200 h para nivel profesional; el español está en Cat. I, ≈600 h). Encima, casi todo el material bueno está <strong>en inglés</strong>. Toca cada tarjeta para ver el detalle y el antídoto.</p>
+
+  <div class="pains">
+    <details class="pain"><summary><span class="ico">字</span><span class="st"><b>Tres escrituras</b><span>46 hiragana + 46 katakana + ~2.000 kanji</span></span><span class="plus">+</span></summary>
+      <div class="more"><p>Son ~2.000 kanji jōyō de un universo de 50.000; el 60% tiene 2+ lecturas (on/kun). Los nativos tardan 9 años de escuela. Se confunden シツソン.</p><p class="quote">"Olvidé lo del N3", "prisión de Anki/WaniKani".</p><div class="fix"><b>Antídoto:</b> kana en 2–4 semanas con mnemotecnia y planas corregidas; kanji por radicales y con furigana, nunca listas sueltas.</div></div></details>
+    <details class="pain"><summary><span class="ico">は</span><span class="st"><b>Gramática al revés</b><span>Sujeto-Objeto-Verbo, partículas, sujeto omitido</span></span><span class="plus">+</span></summary>
+      <div class="more"><p>El verbo va al final (hay que retener toda la frase), は/が/を, el tópico, la aglutinación y lo que "se sobreentiende" se omite.</p><p class="quote">"Muro de partículas", "tengo que esperar al final".</p><div class="fix"><b>Antídoto:</b> frases de anime que ya conocen como plantillas; partículas con colores y pocas reglas a la vez.</div></div></details>
+    <details class="pain"><summary><span class="ico">敬</span><span class="st"><b>Keigo: el libro ≠ la calle</b><span>Tres registros de cortesía</span></span><span class="plus">+</span></summary>
+      <div class="more"><p>Teineigo (masu), sonkeigo (irassharu, meshiagaru) y kenjōgo (mairu, itadaku). Se enseña tarde y mal; hasta los nativos se equivocan.</p><p class="quote">"Me dijeron <i>dochira kara irasshaimasu ka</i> y quedé patidifuso".</p><div class="fix"><b>Antídoto:</b> keigo de supervivencia (tienda, restaurante, konbini) desde el inicio, como frases hechas.</div></div></details>
+    <details class="pain"><summary><span class="ico">英</span><span class="st"><b>Todo está en inglés</b><span>Genki, WaniKani, LingoDeer… y de pago</span></span><span class="plus">+</span></summary>
+      <div class="more"><p>28,5% de las instituciones reporta escasez de material y 23,9% información inexacta (JF 2012). Minna/Marugoto se sienten desactualizados.</p><p class="quote">"Si no sé inglés, estoy frito".</p><div class="fix"><b>Antídoto:</b> sí hay material oficial y gratis en español: NHK "Japonés fácil", Minato/Marugoto e Irodori (ver sección 09).</div></div></details>
+    <details class="pain"><summary><span class="ico">時</span><span class="st"><b>Tiempo y meseta</b><span>Subidón en la semana 1, bajón en el mes 2</span></span><span class="plus">+</span></summary>
+      <div class="more"><p>"¡Ya leo hiragana!" la primera semana, luego una meseta larga. El repaso espaciado (SRS) se odia. Olvidar es normal, pero duele.</p><p class="quote">"Llego cansado del trabajo", "no reconozco el 90%".</p><div class="fix"><b>Antídoto:</b> metas semanales visibles (1 kana/día + 1 frase), rachas compartidas en el grupo, celebrar los micro-logros.</div></div></details>
+    <details class="pain"><summary><span class="ico">話</span><span class="st"><b>Sin nadie con quién hablar</b><span>Pocas horas, cursos lentos, presencial caro</span></span><span class="plus">+</span></summary>
+      <div class="more"><p>Es una lengua minoritaria: hay pocas horas, el japonés de clase no suena al del anime, y el compañero arrastra malos hábitos.</p><p class="quote">"Sin uso real es imposible mantenerlo".</p><div class="fix"><b>Antídoto:</b> voice semanal, intercambio con nativos (Discord ES-JP, HelloTalk) y grabarse leyendo.</div></div></details>
+    <details class="pain"><summary><span class="ico">語</span><span class="st"><b>Vocabulario enorme</b><span>Con 1.000 palabras entiendes ~60% (francés ~80%)</span></span><span class="plus">+</span></summary>
+      <div class="more"><p>気 tiene decenas de modismos; mizu/yu, préstamos del inglés y neologismos constantes.</p><p class="quote">"Siento que no avanzo en años".</p><div class="fix"><b>Antídoto:</b> vocabulario por temas que les importan (anime, comida, viaje) y los préstamos del inglés como atajo.</div></div></details>
+    <details class="pain"><summary><span class="ico">音</span><span class="st"><b>La ventaja hispana (que sí existe)</b><span>5 vocales, sílabas abiertas</span></span><span class="plus">+</span></summary>
+      <div class="more"><p>La fonología del español ayuda a pronunciar casi sin acento, mejor que los angloparlantes (Cao et al. 2012; revisión 2026). Pero no salva ni los kanji ni el keigo.</p><div class="fix"><b>Úsalo:</b> "tu español ya te da la pronunciación" es un mensaje de confianza muy potente para la primera clase.</div></div></details>
+  </div>
+</section>
+
+<!-- ===================== 8. TIEMPO ===================== -->
+<section class="block" id="tiempo">
+  <div class="sec-head"><div class="sec-no">08</div><h2>¿Cuánto tarda, de verdad?</h2><div class="kanji" aria-hidden="true">時間</div></div>
+  <p class="answer"><b>En corto:</b> mueve el control. A 2 h por semana, el N5 tarda <strong>años</strong>, no meses. Por eso nadie debería prometer "japonés en 14 días".</p>
+
+  <div class="chart-card">
+    <div class="calc">
+      <div>
+        <label for="hrs">Horas de estudio por semana</label>
+        <input type="range" id="hrs" min="1" max="25" step="0.25" value="3.75">
+        <div class="hv num"><span id="hrsVal">3,75</span> <small>h/semana</small></div>
+        <div class="presets">
+          <button type="button" data-h="2">Solo clase 2 h</button>
+          <button type="button" data-h="3.75">2 h + 15 min/día</button>
+          <button type="button" data-h="7">1 h/día</button>
+          <button type="button" data-h="20">Intensivo 20 h</button>
+        </div>
+        <p style="font-size:13px;color:var(--ink-3);margin:12px 0 0">Rango de horas: encuesta JLEC (autorreportada, sin saber kanji). Es orientativo: la calidad del estudio cambia mucho el resultado.</p>
+      </div>
+      <div class="calc-out" id="calcOut" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-top"><div><p class="chart-title">Horas para aprobar cada nivel del JLPT</p><p class="chart-cap">Barra sólida: quien no sabe kanji (hispanos). Barra punteada: quien ya sabe kanji (China, Taiwán). JLEC.</p></div></div>
+    <div class="bars" id="hoursBars"></div>
+    <div class="legend"><span><i style="background:var(--ai)"></i>Sin saber kanji</span><span><i style="background:var(--ai-soft);border:1px dashed var(--ai)"></i>Ya sabe kanji</span></div>
+  </div>
+  <p class="note">Tasa de aprobación del N5 fuera de Japón en julio de 2024: <b>49%</b>. La mitad de quienes se presentan al nivel más básico no lo pasa.</p>
+</section>
+
+<!-- ===================== 9. EMPEZAR ===================== -->
+<section class="block" id="empezar">
+  <div class="sec-head"><div class="sec-no">09</div><h2>Cómo empezar gratis y en español</h2><div class="kanji" aria-hidden="true">始</div></div>
+  <p class="answer"><b>En corto:</b> el mito "todo está en inglés" es medio cierto. Hay material <strong>oficial, gratis y en español</strong>, aunque poca gente lo conoce. Y la comunidad hispana ya está en Discord.</p>
+
+  <h3 style="font-size:19px;margin:0 0 10px">Material oficial gratis</h3>
+  <div class="res">
+    <a class="r" href="https://www3.nhk.or.jp/nhkworld/es/learnjapanese/" target="_blank" rel="noopener"><em>GRATIS · ES</em><b>NHK World · Japonés fácil</b><span>Lecciones en video de la TV pública japonesa, con explicación en español.</span></a>
+    <a class="r" href="https://minato-jf.jp/" target="_blank" rel="noopener"><em>GRATIS · ES</em><b>JF Minato / Marugoto</b><span>Plataforma de la Japan Foundation, con cursos autoguiados. España es su mayor usuario en Europa.</span></a>
+    <a class="r" href="https://www.irodori.jpf.go.jp/" target="_blank" rel="noopener"><em>GRATIS · ES</em><b>Irodori (Japan Foundation)</b><span>Japonés para vivir y trabajar en Japón, nivel A1–A2, con audio e ilustraciones.</span></a>
+    <a class="r" href="https://portal.jp-mirai.org/es/study/s/japanese/free-online-japanese-language-class" target="_blank" rel="noopener"><em>GRATIS · ES</em><b>JP-MIRAI</b><span>Guía de clases online gratuitas para quien va a trabajar a Japón.</span></a>
+  </div>
+
+  <h3 style="font-size:19px;margin:22px 0 10px">Dónde está la comunidad hispana</h3>
+  <div class="res">
+    <a class="r" href="https://discord.com/servers/unagibunaprendamos-japones-593244850787319824" target="_blank" rel="noopener"><em>DISCORD</em><b>Unagibun</b><span>El más grande de LATAM, con reuniones diarias.</span></a>
+    <a class="r" href="https://discord.com/servers/toshokanes-jpyan-yu-jiao-huan-802980826181926954" target="_blank" rel="noopener"><em>DISCORD</em><b>Toshokan ES-JP</b><span>Intercambio diario con japoneses.</span></a>
+    <a class="r" href="https://discord.com/servers/manabe-xue-be-654351832734498836" target="_blank" rel="noopener"><em>DISCORD</em><b>Manabe</b><span>Inmersión, ejercicios de kana y simulacros del JLPT.</span></a>
+    <a class="r" href="https://t.me/japonesdesdecerohastan4" target="_blank" rel="noopener"><em>TELEGRAM</em><b>Japonés desde cero hasta N4</b><span>~2.274 miembros, con filtro anti-spam.</span></a>
+    <a class="r" href="https://www.reddit.com/r/aprendojapones/" target="_blank" rel="noopener"><em>REDDIT</em><b>r/aprendojapones · r/aprenderjapones</b><span>Pequeños pero 100% del público objetivo.</span></a>
+    <a class="r" href="https://www.reddit.com/r/LearnJapanese/" target="_blank" rel="noopener"><em>REDDIT</em><b>r/LearnJapanese</b><span>Enorme, en inglés; útil desde el N5.</span></a>
+  </div>
+  <p class="note">También: HelloTalk, Tandem y HiNative para intercambio; Nihongo no Torii e Intercambio JP-ES en Discord; comunidadjapon.academy (+20 países).</p>
+</section>
+
+<!-- ===================== 10. GRUPO ===================== -->
+<section class="block" id="grupo">
+  <div class="sec-head"><div class="sec-no">10</div><h2>Qué implica para un grupo gratis de 2 h/semana</h2><div class="kanji" aria-hidden="true">道</div></div>
+  <p class="answer"><b>En corto:</b> promete un <strong>camino</strong>, no una fecha. Vende la meta de "ir a Japón", usa el material gratis en español y convierte en N5→N4, que es donde empieza lo que la gente paga.</p>
+  <ul class="checklist">
+    <li><span><b>Promesa:</b> "hiragana + katakana + frases de anime, en español, sin saber inglés: 15 min al día + 2 h en vivo". Nada de "en 14 días".</span></li>
+    <li><span><b>Gancho por el motivo que crece:</b> "aprende para viajar, estudiar o hacer working holiday en Japón". El anime atrae, Japón retiene.</span></li>
+    <li><span><b>Retención:</b> 1 kana al día + 1 frase de anime + un voice semanal leyendo, corrección de fotos de planas y grabaciones de las clases.</span></li>
+    <li><span><b>Expectativa honesta:</b> muestra la calculadora de la sección 08 el primer día. A 3,75 h/semana, el N5 son ~1,7–3 años. Quien quiera ir más rápido necesita más horas, y ahí entra la oferta de pago.</span></li>
+    <li><span><b>Material base gratis en español:</b> NHK "Japonés fácil" + Irodori. Ahorra preparar todo desde cero y da credibilidad (es el gobierno japonés).</span></li>
+    <li><span><b>Escalón de pago:</b> kanji y estructura N5, partículas, conversación, plan con certificado y grupos pequeños. <b>Hito estrella: N4</b>, que habilita la visa SSW para trabajar en Japón. Pitch de 30 segundos al final de la clase.</span></li>
+    <li><span><b>Captación:</b> post del fundador "comenta YO + vota el horario" → formulario de 30 s (país, días, franja, nivel, motivo) → Discord. Sin formularios largos.</span></li>
+    <li><span><b>Dónde reclutar primero:</b> México (volumen + Bajío), España (autodidactas, Minato) y Argentina/Chile (working holiday). En Colombia, el gancho es el viaje, no el empleo.</span></li>
+  </ul>
+</section>
+
+<!-- ===================== MÉTODO ===================== -->
+<section class="block" id="metodo">
+  <div class="sec-head"><div class="sec-no">i</div><h2>Metodología y límites</h2><div class="kanji" aria-hidden="true">法</div></div>
+  <div class="grid-2">
+    <div class="card"><h3>Cómo se hizo</h3><p>Triangulación entre <strong>datos oficiales</strong> (encuestas Japan Foundation 2012–2024 con capítulos regionales, estadísticas JLPT 2024 por sede, JNTO, MEXT, JICA, FSI, Agencia de Inmigración de Japón), <strong>papers y tesis</strong> (España, Colombia, Chile, Australia), <strong>vacantes reales</strong> de México 2026 y <strong>comunidades</strong> (Reddit, Discord, Telegram).</p></div>
+    <div class="card"><h3>Qué no dice</h3><p>La Japan Foundation encuesta <strong>instituciones</strong>, no alumnos, y excluye a los autodidactas. Los foros tienen sesgo de fan. Las vacantes son una foto del Bajío en 2026, no un censo. El turismo post-COVID está inflado por el yen débil. Las horas JLEC son autorreportadas. Las cifras de visas y acuerdos pueden cambiar: verifica en tu embajada.</p></div>
+  </div>
+  <p class="note">Niveles de fuente: <span class="tier l1">L1</span> oficial/gobierno · <span class="tier l2">L2</span> académico o prensa establecida · <span class="tier l3">L3</span> sitio especializado · <span class="tier l4">L4</span> comunidad/foro. <span class="new">NUEVO</span> = añadida en v3.</p>
+</section>
+
+<!-- ===================== FUENTES ===================== -->
+<section class="block" id="fuentes">
+  <div class="sec-head"><div class="sec-no">✦</div><h2>Fuentes</h2><div class="kanji" aria-hidden="true">典</div></div>
+  <div class="src-groups">
+    <details class="src" open><summary>Cuántos estudian y por qué <span>· Japan Foundation, JLPT, Duolingo</span></summary><ol>
+      <li><span class="tier l1">L1</span>Japan Foundation (2025). <em>Survey on Japanese-Language Education Abroad 2024</em>: resumen y tabla por país. <a href="https://www.jpf.go.jp/e/project/japanese/survey/result/information.html">jpf.go.jp 2024</a> · <a href="https://www.jpf.go.jp/e/project/japanese/survey/result/information/dl/overview_of_survey_results_en.pdf">overview PDF (tabla por país, motivos globales)</a></li>
+      <li><span class="tier l1">L1</span>Japan Foundation (2025). Capítulo <em>Central America</em> 2024: México 15.151 alumnos, 69,2% fuera del colegio, motivos 2021 vs 2024, Aguascalientes 2.º estado. <a href="https://www.jpf.go.jp/e/project/japanese/survey/result/information/dl/central_america_en.pdf">central_america PDF</a><span class="new">NUEVO</span></li>
+      <li><span class="tier l1">L1</span>Japan Foundation (2025). Capítulo <em>South America</em> 2024: Paraguay +159%, Colombia y Perú a la baja, motivos 2024. <a href="https://www.jpf.go.jp/e/project/japanese/survey/result/information/dl/south_america_en.pdf">south_america PDF</a><span class="new">NUEVO</span></li>
+      <li><span class="tier l1">L1</span>Japan Foundation (2025). Capítulo <em>Western Europe</em> 2024: 85,5% anime; España 20,1 por cada 100 mil, Minato y Cataluña. <a href="https://www.jpf.go.jp/e/project/japanese/survey/result/information/dl/western_europe_en.pdf">western_europe PDF</a></li>
+      <li><span class="tier l1">L1</span>Japan Foundation (2021). <em>Survey Report 2021</em> + formularios de motivos. <a href="https://www.jpf.go.jp/e/project/japanese/survey/result/survey21.html">survey21</a> · <a href="https://www.jpf.go.jp/e/project/japanese/survey/result/dl/survey2021/Text_r2.pdf">Text_r2 PDF</a></li>
+      <li><span class="tier l1">L1</span>JLPT (2024). Resultados de julio 2024 por sede. <a href="https://www.jlpt.jp/statistics/pdf/2024_1_9.pdf">2024_1 PDF</a> · Diciembre 2024 por sede: <a href="https://www.jlpt.jp/statistics/pdf/2024_2_3.pdf">2024_2 PDF</a> · <a href="https://www.jlpt.jp/e/statistics/archive.html">archivo</a><span class="new">NUEVO</span></li>
+      <li><span class="tier l2">L2</span>University of Arkansas (2024). <em>JLPT reaches all-time high registration</em> (1.718.943 inscritos). <a href="https://news.uark.edu/articles/72890/japanese-language-proficiency-test-reaches-all-time-high-registration-for-2024">uark</a><span class="new">NUEVO</span></li>
+      <li><span class="tier l2">L2</span>Duolingo (2025). <em>2025 Duolingo Language Report</em>: japonés 4.º idioma global. <a href="https://blog.duolingo.com/2025-duolingo-language-report/">blog.duolingo.com</a><span class="new">NUEVO</span></li>
+      <li><span class="tier l2">L2</span>Velloso Mataix, G. (2022). <em>Nuevos enfoques enseñanza japonés era digital</em>. TFG Sevilla. <a href="https://idus.us.es/handle/11441/144065">idus 144065</a></li>
+      <li><span class="tier l2">L2</span>Lorente Garcia, E. (2020). <em>Motivation and strategies: Japanese in Barcelona</em>. <a href="https://hdl.handle.net/2445/171210">hdl 2445/171210</a></li>
+      <li><span class="tier l2">L2</span>Imura, T. <em>Portrait of J-pop culture fans studying Japanese (Australia)</em>. Griffith. <a href="https://research-repository.griffith.edu.au/server/api/core/bitstreams/2660eb83-4d11-4df0-a268-be24d763cf63/content">griffith PDF</a></li>
+    </ol></details>
+
+    <details class="src"><summary>Anime, soft power y cultura pop <span>· Cool Japan, CLACSO, Chile</span></summary><ol>
+      <li><span class="tier l2">L2</span>Cabaña Rojas, I. (2021). <em>Rethinking pop culture in Japan's soft power in Chile</em>. <a href="https://www.japanesestudies.org.uk/ejcjs/vol21/iss3/cabana_rojas.html">ejcjs</a></li>
+      <li><span class="tier l1">L1</span>Cabinet Office Japan (2019). <em>Cool Japan Strategy</em>. <a href="https://www.cao.go.jp/cool_japan/english/main_document_2019.pdf">cao PDF</a></li>
+      <li><span class="tier l2">L2</span>Baker, M.A. (2025). <em>Japan's Pop Culture Soft Power</em> (preprint). <a href="https://jxiv.jst.go.jp/index.php/jxiv/preprint/download/1525/3980/3869">jxiv PDF</a></li>
+      <li><span class="tier l2">L2</span>Paredes, M. / CLACSO (2026). <em>Soft power de Japón en LATAM: diplomacia corporativa</em>. <a href="https://www.clacso.org/en/el-poder-suave-de-japon-en-america-latina-diplomacia-corporativa-bajo-la-sombra-de-la-hegemonia-estadounidense/">clacso</a></li>
+      <li><span class="tier l2">L2</span>Santiago Iglesias, J.A. (2017). <em>Japón imaginado. Imaginario manganime y peregrinación</em>. <a href="https://revistas.ucm.es/index.php/MIRA/en/article/download/57116/51550/114636">UCM PDF</a></li>
+      <li><span class="tier l3">L3</span>Cool Japan (Wikipedia): panorama y críticas. <a href="https://en.wikipedia.org/wiki/Cool_Japan">wikipedia</a></li>
+      <li><span class="tier l1">L1</span>Fundación Japón en México: programa de contenidos para LATAM desde 2015. <a href="https://mc.jpf.go.jp/sobre-la-fundacion/">mc.jpf.go.jp</a><span class="new">NUEVO</span></li>
+    </ol></details>
+
+    <details class="src"><summary>Turismo y visas <span>· JNTO, prensa, embajadas</span></summary><ol>
+      <li><span class="tier l1">L1</span>JNTO vía JTB (2025). <em>Viajes 2024: 36,87 M y ¥8,1 billones</em>. <a href="https://www.jtb.or.jp/book/wp-content/uploads/sites/4/2025/10/nenpo2025_2_1.pdf">jtb PDF</a></li>
+      <li><span class="tier l2">L2</span>Europapress (2025). <em>Japón 36,8 M récord 2024</em> (España 182.300). <a href="https://www.europapress.es/turismo/nacional/noticia-japon-bate-nuevo-record-turistas-gasto-2024-368-millones-visitantes-50836-millones-euros-20250116171510.html">europapress</a></li>
+      <li><span class="tier l3">L3</span>Japón desde Japón (2026). <em>42,7 M en 2025</em>. <a href="https://japondesdejapon.com/2026/01/25/record-de-42-7-millones-de-visitantes-internacionales-en-japon-durante-el-2025/">japondesdejapon</a></li>
+      <li><span class="tier l2">L2</span>Forbes México (2026). <em>200.400 mexicanos en 2025</em>. <a href="https://forbes.com.mx/2025-el-ano-que-marco-record-de-turistas-mexicanos-en-japon/">forbes</a> · Amaviajar 2024: <a href="https://www.amaviajar.com.mx/2025/01/15/cifras-record-mas-de-151-mil-mexicanos-visitaron-japon-en-2024/">151.800</a> · Rev101 2025: <a href="https://rev101.com/2026/01/japon-consolida-su-atractivo-entre-los-viajeros-mexicanos-y-alcanza-cifra-historica-de-visitantes-en-2025/">detalle</a></li>
+      <li><span class="tier l2">L2</span>Ladevi España (2026). <em>245.600 españoles en 2025</em>. <a href="https://espana.ladevi.info/negocios/japon-consolida-su-atractivo-el-mercado-espanol-y-proyecta-mayor-diversificacion-regional-2026-n95239">ladevi</a></li>
+      <li><span class="tier l2">L2</span>Fragomen (2025). <em>Japan: visa-free travel for Peruvians starting July 2025</em>. <a href="https://www.fragomen.com/insights/japan-visa-free-travel-for-peruvians-starting-july-2025-announced.html">fragomen</a><span class="new">NUEVO</span></li>
+      <li><span class="tier l1">L1</span>Embajada de Japón en Colombia: información de visas. <a href="https://www.colombia.emb-japan.go.jp/itpr_es/ReactivaVisa.html">emb-japan CO</a> · Noticias Caracol (2025): <a href="https://www.noticiascaracol.com/estilo-de-vida/visa-para-viajar-a-japon-en-2025-requisitos-pasos-y-cambios-clave-que-deben-saber-los-colombianos-so35">requisitos</a><span class="new">NUEVO</span></li>
+      <li><span class="tier l1">L1</span>Working holiday: Embajada de Japón en Chile <a href="https://www.cl.emb-japan.go.jp/itpr_es/WorkingHolidayChileJapon.html">Chile</a> · Consulado en Barcelona <a href="https://www.barcelona.es.emb-japan.go.jp/itpr_ja/workingholiday.html">España</a> · Embajada en Argentina <a href="https://www.ar.emb-japan.go.jp/itpr_ja/NuevoAvisoWorkingHoliday03112020.html">Argentina</a> · resumen <a href="https://www.yomeanimo.com/working-holiday-japon-conseguir-la-visa">YoMeAnimo</a><span class="new">NUEVO</span></li>
+    </ol></details>
+
+    <details class="src"><summary>Trabajo, visas laborales y becas <span>· Bajío, SSW, MEXT, JICA</span></summary><ol>
+      <li><span class="tier l1">L1</span>Gobierno de Guanajuato · Puerto Interior (2026). <em>Ya son más de 300 los establecimientos japoneses en Guanajuato</em> (1.600 MX / 700 Bajío, datos MOFA oct 2024). <a href="https://puertointerior.guanajuato.gob.mx/blog/2026/09/30/toyota-abrio-camino-y-ya-son-mas-de-300-los-establecimientos-japoneses-en-guanajuato/">puertointerior</a><span class="new">NUEVO</span></li>
+      <li><span class="tier l1">L1</span>JETRO México (2025). <em>Pabellón de Japón en el Foro de Proveeduría Automotriz de Guanajuato</em>. <a href="https://www.jetro.go.jp/mexico/topics/_546785.html">jetro</a><span class="new">NUEVO</span></li>
+      <li><span class="tier l3">L3</span>Empleo Bajío 2026: Nikkei Irapuato <a href="https://es.linkedin.com/posts/nikkei-business-mexico_vacante-empleo-traductor-activity-7476288183324946433-LRJ9">60–70k</a> · Cámara Japonesa <a href="https://japon.org.mx/ja/cb-profile/562-hitachiqro239.html">bolsa</a> · A'S Japan SLP <a href="https://es.linkedin.com/posts/a-s-japan-mexico_vacante-disponible-traductor-master-de-japones-espa%C3%B1ol-activity-7440467934499536896-93F4">Master N1/N2</a> · THK Silao <a href="https://empleo24.mx/traductor-tecnico_guanajuato-c315533/2026-09-thk-rhythm-mexicana-s-a-de-c-v_i4212139142">técnico</a> · Joblink Silao <a href="https://mx.bebee.com/job/3105c1879d92be78a21694e62ca9a712">$55k N3+</a></li>
+      <li><span class="tier l2">L2</span>Nippon.com (2026). <em>Japón supera los 4 millones de residentes extranjeros</em> (4.125.395; SSW 390.296, +37,2%). <a href="https://www.nippon.com/es/japan-data/h02750/">nippon.com</a><span class="new">NUEVO</span></li>
+      <li><span class="tier l3">L3</span>Expat.jp (2026). <em>Specified Skilled Worker visa: complete guide</em> (JLPT N4 / JFT-Basic A2; N3 para transporte). <a href="https://expat.jp/specified-skilled-worker-visa-japan/">expat.jp</a> · <a href="https://fujitaro-office.com/en/post40/">requisitos de idioma por visa</a><span class="new">NUEVO</span></li>
+      <li><span class="tier l1">L1</span>MEXT / Study in Japan: <em>7 becas desde 1954</em> <a href="https://www.studyinjapan.go.jp/en/planning/scholarships/about-scholarships/">overview</a> · <em>Undergraduate</em> <a href="https://www.mext.go.jp/content/20260420-mxt-kotokoku01-000049232_02.pdf">MEXT PDF</a> · <em>Japanese Studies 2026</em> <a href="https://www.mext.go.jp/content/20251222-mxt-kotokoku01-000046488_02.pdf">MEXT PDF</a> · <a href="https://www.u-tokyo.ac.jp/en/prospective-students/mext_scholarship.html">UTokyo</a></li>
+      <li><span class="tier l1">L1</span>JICA (2026). <em>Beca Nikkei LATAM-Caribe</em>. <a href="https://www.scribd.com/document/1075730330/FY2026ApplicationGuide">guide</a></li>
+      <li><span class="tier l2">L2</span>Asociación Peruano Japonesa. <em>La APJ actualiza estimación de nikkei peruanos a 200 mil</em>. <a href="https://www.apj.org.pe/publicacion_detalle/la-apj-actualiza-estimacion-de-nikkei-peruanos-a-200-mil-personas">apj.org.pe</a><span class="new">NUEVO</span></li>
+      <li><span class="tier l2">L2</span>International Press (2025). <em>Japón supera los 3,6 millones de extranjeros</em> (211.229 brasileños, 49.220 peruanos). <a href="https://internationalpress.jp/2025/08/06/japon-suma-350-000-extranjeros-en-un-ano-y-supera-los-36-millones/">internationalpress</a><span class="new">NUEVO</span></li>
+      <li><span class="tier l2">L2</span>Discover Nikkei (2010). <em>Hijos de dekasegi: la nueva generación nikkei</em>. <a href="https://discovernikkei.org/en/journal/2010/11/17/hijos-de-dekasegi/">discovernikkei</a> · Wochikochi (2017): <a href="https://www.wochikochi.jp/english/foreign/2017/01/how-did-japanese-language-education-develop-in-brazil-the-home-of-the-largest-nikkei-community.php">japonés en Brasil</a><span class="new">NUEVO</span></li>
+    </ol></details>
+
+    <details class="src"><summary>Dificultad, horas y aprendizaje <span>· FSI, JLEC, papers</span></summary><ol>
+      <li><span class="tier l1">L1</span>FSI (Departamento de Estado de EE. UU.). <em>Cat. IV: japonés 2.200 h / 88 semanas</em>. <a href="https://2009-2017.state.gov/m/fsi/sls/orgoverview/languages">state.gov</a> · <a href="https://chrysanthemum.commons.gc.cuny.edu/2021/05/is-japanese-a-really-difficult-language-the-u-s-department-of-state-thinks-so/">CUNY</a> · <a href="https://hourstolearnalanguage.com/hours/japanese/">2.200 h</a> · <a href="https://hourstolearnalanguage.com/difficulty/japanese/">dificultad</a></li>
+      <li><span class="tier l3">L3</span>Coto Academy (2026). <em>Horas para aprobar el JLPT</em>, con datos JLEC 2010–2015 por nivel (con y sin kanji). <a href="https://cotoacademy.com/study-hours-needed-pass-jlpt-comparison-levels/">cotoacademy</a><span class="new">NUEVO</span></li>
+      <li><span class="tier l2">L2</span>Ito-Morales, K. (2019). <em>Estado actual y desafío TIC en japonés LE</em>. <a href="https://doi.org/10.30827/digibug.58479">doi digibug.58479</a></li>
+      <li><span class="tier l2">L2</span>Inagán Galviz, M. (2023). <em>BUNTABI kanji A2.1-A2.2 Cali</em> (JF 2012: 28,5% / 23,9%). <a href="https://repositorio.uniajc.edu.co/handle/uniajc/1851">uniajc 1851</a></li>
+      <li><span class="tier l3">L3</span>Perelló (2024): <a href="https://jlperello.com/blog/2024/11/06/el-lenguaje-de-cortesia-japones/">keigo</a> · (2025): <a href="https://jlperello.com/blog/2025/07/10/dificultades-del-japones-vi-refranes-modismos-y-vocabulario/">vocabulario y modismos</a> · Japonés-Online: <a href="https://www.japones-online.com/post/aprender-japones-es-dificil">SOV, kana y kanji</a></li>
+      <li><span class="tier l3">L3</span>GoGoNihon: <a href="https://gogonihon.com/es/blog/5-razones-para-aprender-japones/">5 razones</a> · EF: <a href="https://www.ef.com/wwes/blog/language/por-que-aprender-japones/">4 razones</a> · Kansei: <a href="https://kansei.app/kanji-japones-para-hispanohablantes/">kanji para hispanos</a></li>
+    </ol></details>
+
+    <details class="src"><summary>Recursos gratis en español <span>· NHK, Japan Foundation</span></summary><ol>
+      <li><span class="tier l1">L1</span>NHK World-Japan. <em>Japonés fácil</em> (en español). <a href="https://www3.nhk.or.jp/nhkworld/es/learnjapanese/">nhk.or.jp</a><span class="new">NUEVO</span></li>
+      <li><span class="tier l1">L1</span>Japan Foundation. <em>JF Japanese e-Learning Minato</em>. <a href="https://minato-jf.jp/">minato-jf.jp</a> · <em>Irodori</em>: <a href="https://www.irodori.jpf.go.jp/">irodori.jpf.go.jp</a> · reseña TUFS: <a href="https://wp3.tufs.ac.jp/nijiiro/japan-foundation-irodori-japanese-online-course/">Irodori en español</a><span class="new">NUEVO</span></li>
+      <li><span class="tier l1">L1</span>JP-MIRAI. <em>Clases de japonés online gratis</em>. <a href="https://portal.jp-mirai.org/es/study/s/japanese/free-online-japanese-language-class">jp-mirai</a><span class="new">NUEVO</span></li>
+    </ol></details>
+
+    <details class="src"><summary>Comunidad y foros <span>· Reddit, Discord, Telegram</span></summary><ol>
+      <li><span class="tier l4">L4</span>r/mexico (2020), público interesado: <a href="https://www.reddit.com/r/mexico/comments/i8h84h/cu%C3%A1l_creen_ustedes_que_es_el_p%C3%BAblico_interesado/">reddit</a> · r/aprendojapones (2022), cómo y por qué: <a href="https://www.reddit.com/r/aprendojapones/comments/vbl6o2/c%C3%B3mo_y_por_qu%C3%A9_estudiar_japon%C3%A9s/">reddit</a></li>
+      <li><span class="tier l4">L4</span>r/aprenderjapones (2024), solo verbal anime/J-pop: <a href="https://www.reddit.com/r/aprenderjapones/comments/1c2d5ap/quiero_aprender_japones_pero/">reddit</a> · r/AskArgentina (2025), autodidacta diario: <a href="https://www.reddit.com/r/AskArgentina/comments/1hw9ryy/compatriotas_que_aprendieron_a_hablar_japones/">reddit</a></li>
+      <li><span class="tier l4">L4</span>r/LearnJapanese (2024), por qué abandonan: <a href="https://www.reddit.com/r/LearnJapanese/comments/1amvbk7/why_do_so_many_japanese_learners_quit_or_become/">reddit</a> · r/RedditPregunta (2024), ¿viable en Colombia?: <a href="https://www.reddit.com/r/RedditPregunta/comments/1ggqxxf/es_viable_aprender_japones/">reddit</a> · r/AskChile (2026), Genki vs Minna: <a href="https://www.reddit.com/r/AskChile/comments/1rc9pxu/estoy_tratando_de_aprender_japon%C3%A9s_por_mi_cuenta/">reddit</a></li>
+      <li><span class="tier l4">L4</span>Comunidades: Unagibun <a href="https://discord.com/servers/unagibunaprendamos-japones-593244850787319824">discord</a> · Toshokan <a href="https://discord.com/servers/toshokanes-jpyan-yu-jiao-huan-802980826181926954">discord</a> · Manabe <a href="https://discord.com/servers/manabe-xue-be-654351832734498836">discord</a> · Telegram N4 <a href="https://t.me/japonesdesdecerohastan4">telegram</a></li>
+    </ol></details>
+  </div>
+  <p class="note">Cita libre con enlace. Para materiales de venta, usa la fórmula honesta: <b>"encuestas a instituciones + estadística JLPT + foros + foto laboral 2026, no un censo oficial"</b>.</p>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">v3 · rediseño + investigación ampliada (1 oct 2026) · <a href="../">Todas las investigaciones</a> · <a href="https://github.com/Cassers/investigaciones/tree/main/japones-hispanos">Código</a></div>
+</footer>
+
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script>
+(function(){
+  "use strict";
+  var fmt = {format:function(n){ return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,"."); }};
+  var f1 = new Intl.NumberFormat("es-ES",{minimumFractionDigits:1,maximumFractionDigits:1});
+  function el(tag, cls, html){ var e=document.createElement(tag); if(cls) e.className=cls; if(html!=null) e.innerHTML=html; return e; }
+
+  /* ---------- theme ---------- */
+  var root=document.documentElement, KEY="jh-theme";
+  try{ var saved=localStorage.getItem(KEY); if(saved==="light"||saved==="dark") root.setAttribute("data-theme",saved); }catch(e){}
+  document.getElementById("themeBtn").addEventListener("click",function(){
+    var cur=root.getAttribute("data-theme");
+    if(!cur){ cur=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"; }
+    var next=cur==="dark"?"light":"dark";
+    root.setAttribute("data-theme",next);
+    try{ localStorage.setItem(KEY,next); }catch(e){}
+  });
+
+  /* ---------- tooltip ---------- */
+  var tip=document.getElementById("tip");
+  function showTip(t,x,y){ tip.innerHTML=t; tip.classList.add("on"); var w=tip.offsetWidth,h=tip.offsetHeight; var nx=Math.min(x+14,window.innerWidth-w-8), ny=y-h-12; if(ny<8) ny=y+18; tip.style.left=nx+"px"; tip.style.top=ny+"px"; }
+  function hideTip(){ tip.classList.remove("on"); }
+  document.addEventListener("mousemove",function(e){ var r=e.target.closest&&e.target.closest("[data-tip]"); if(r) showTip(r.getAttribute("data-tip"),e.clientX,e.clientY); else hideTip(); });
+  document.addEventListener("focusin",function(e){ var r=e.target.closest&&e.target.closest("[data-tip]"); if(r){ var b=r.getBoundingClientRect(); showTip(r.getAttribute("data-tip"),b.left+b.width/2,b.top); } });
+  document.addEventListener("focusout",hideTip);
+  window.addEventListener("scroll",hideTip,{passive:true});
+
+  /* ---------- generic bar renderer ---------- */
+  function renderBars(container, rows, opts){
+    opts=opts||{};
+    container.innerHTML="";
+    var max=opts.max||Math.max.apply(null,rows.map(function(r){return Math.abs(r.v);}));
+    var hasNeg=rows.some(function(r){return r.v<0;});
+    var minNeg=hasNeg?Math.min.apply(null,rows.map(function(r){return r.v;})):0;
+    var span=hasNeg?(max+Math.abs(minNeg)):max;
+    rows.forEach(function(r){
+      var row=el("div","bar-row"); row.tabIndex=0;
+      row.setAttribute("data-tip", r.tip || ("<b>"+r.label+"</b><br>"+r.fmt));
+      row.setAttribute("aria-label", r.label+": "+(r.fmt||r.v));
+      row.appendChild(el("div","bar-label",r.label+(r.sub?" <small>"+r.sub+"</small>":"")));
+      var tr=el("div","bar-track");
+      if(hasNeg){
+        var zero=Math.abs(minNeg)/span*100;
+        var ax=el("div","bar-axis"); ax.style.left=zero+"%"; tr.appendChild(ax);
+        var fill=el("div","bar-fill"+(r.v<0?" neg":"")+(r.ref?" ref":""));
+        var w=Math.abs(r.v)/span*100;
+        tr.appendChild(fill);
+        var val=el("span","bar-val",r.fmt);
+        if(r.v<0){ fill.style.marginLeft=(zero-w)+"%"; tr.appendChild(val); }
+        else { fill.style.marginLeft=zero+"%"; tr.appendChild(val); }
+        requestAnimationFrame(function(){ fill.style.width=w+"%"; });
+        fill.style.width="0";
+      } else {
+        var fill2=el("div","bar-fill"+(r.ref?" ref":"")+(r.hl?" hl":""));
+        fill2.style.width="0"; tr.appendChild(fill2);
+        tr.appendChild(el("span","bar-val",r.fmt));
+        var w2=Math.max(r.v/max*82,0.6);
+        requestAnimationFrame(function(){ fill2.style.width=w2+"%"; });
+      }
+      row.appendChild(tr);
+      container.appendChild(row);
+    });
+  }
+
+  /* ---------- 1. countries ---------- */
+  var C=[
+    ["México",15151,14552,12.0],["España",9536,9383,20.1],["Argentina",5093,4486,11.1],["Perú",3551,3761,12.1],
+    ["Paraguay",3269,1262,53.5],["Colombia",1679,2024,3.8],["Chile",918,1096,5.2],["Costa Rica",786,829,15.6],
+    ["Venezuela",477,302,1.8],["Bolivia",470,488,4.7],["Honduras",407,355,4.9],["El Salvador",281,387,4.9],
+    ["Guatemala",280,414,1.9],["Uruguay",163,181,5.0]
+  ];
+  var BR=["Brasil",26708,20732,13.2];
+  var ccBars=document.getElementById("ccBars"), ccTitle=document.getElementById("ccTitle");
+  function countries(mode){
+    var rows=C.map(function(c){
+      var chg=(c[1]/c[2]-1)*100;
+      var tip="<b>"+c[0]+"</b><br>2024: "+fmt.format(c[1])+" alumnos<br>2021: "+fmt.format(c[2])+"<br>Cambio: "+(chg>=0?"+":"")+f1.format(chg)+"%<br>"+f1.format(c[3])+" por cada 100 mil hab.";
+      if(mode==="total") return {label:c[0],v:c[1],fmt:fmt.format(c[1]),tip:tip};
+      if(mode==="rate") return {label:c[0],v:c[3],fmt:f1.format(c[3]),tip:tip};
+      return {label:c[0],v:chg,fmt:(chg>=0?"▲ +":"▼ ")+f1.format(chg)+"%",tip:tip};
+    });
+    rows.sort(function(a,b){return b.v-a.v;});
+    var brChg=(BR[1]/BR[2]-1)*100;
+    var brTip="<b>Brasil</b> (referencia, portugués)<br>2024: "+fmt.format(BR[1])+"<br>Cambio: +"+f1.format(brChg)+"%<br>"+f1.format(BR[3])+" por 100 mil";
+    var br = mode==="total"?{label:"Brasil",sub:"ref.",v:BR[1],fmt:fmt.format(BR[1]),ref:true,tip:brTip}
+           : mode==="rate"?{label:"Brasil",sub:"ref.",v:BR[3],fmt:f1.format(BR[3]),ref:true,tip:brTip}
+           : {label:"Brasil",sub:"ref.",v:brChg,fmt:"▲ +"+f1.format(brChg)+"%",ref:true,tip:brTip};
+    rows.push(br);
+    ccTitle.textContent = mode==="total"?"Estudiantes de japonés en instituciones, 2024"
+      : mode==="rate"?"Estudiantes por cada 100.000 habitantes, 2024"
+      : "Cambio en número de estudiantes, 2021 → 2024";
+    renderBars(ccBars,rows,mode==="total"?{max:BR[1]}:{});
+  }
+  (function table(){
+    var h="<table><thead><tr><th>País</th><th class='n'>2024</th><th class='n'>2021</th><th class='n'>Cambio</th><th class='n'>Por 100 mil</th></tr></thead><tbody>";
+    C.concat([BR]).forEach(function(c){ var chg=(c[1]/c[2]-1)*100; h+="<tr><td>"+c[0]+"</td><td class='n'>"+fmt.format(c[1])+"</td><td class='n'>"+fmt.format(c[2])+"</td><td class='n'>"+(chg>=0?"+":"")+f1.format(chg)+"%</td><td class='n'>"+f1.format(c[3])+"</td></tr>"; });
+    h+="<tr><td><b>20 países hispanos</b></td><td class='n'><b>42.758</b></td><td class='n'>40.289</td><td class='n'>+6,1%</td><td class='n'>—</td></tr></tbody></table>";
+    document.getElementById("ccTable").innerHTML=h;
+  })();
+  document.querySelectorAll("#chartCountries .seg button").forEach(function(b){
+    b.addEventListener("click",function(){
+      document.querySelectorAll("#chartCountries .seg button").forEach(function(x){x.setAttribute("aria-pressed","false");});
+      b.setAttribute("aria-pressed","true"); countries(b.getAttribute("data-mode"));
+    });
+  });
+  countries("total");
+
+  /* ---------- JLPT ---------- */
+  var J=[["México",2049,"Jul: 420 (Mérida, Aguascalientes) · Dic: 1.629 (CDMX, Monterrey, Aguascalientes)"],["España",1932,"Jul: 1.028 · Dic: 904 (Madrid, Barcelona, Valencia, Las Palmas…)"],["Argentina",761,"Jul: 239 · Dic: 522"],["Paraguay",546,"Dic: 546 (Asunción, Iguazú, Pirapó, Encarnación, Amambay)"],["Perú",459,"Jul: 200 · Dic: 259 (Lima)"],["Chile",419,"Jul: 177 · Dic: 242 (Santiago)"],["Costa Rica",227,"Dic: 227 (San José)"],["Colombia",179,"Jul: 142 (Bogotá) · Dic: 37 (Cali)"],["Uruguay",112,"Dic: 112 (Montevideo)"],["Venezuela",110,"Jul: 110 (Caracas)"]];
+  var jrows=J.map(function(j){return {label:j[0],v:j[1],fmt:fmt.format(j[1]),tip:"<b>"+j[0]+"</b><br>"+fmt.format(j[1])+" inscritos en 2024<br>"+j[2]};});
+  jrows.push({label:"Brasil",sub:"ref.",v:4098,fmt:"4.098",ref:true,tip:"<b>Brasil</b> (referencia)<br>Jul: 1.582 · Dic: 2.516"});
+  renderBars(document.getElementById("jlptBars"),jrows,{max:4098});
+
+  /* ---------- motives ---------- */
+  var M={
+    ca:[["Anime, manga, J-pop, moda",74.9],["Interés en el idioma",73.4],["Historia, literatura, arte",63.5],["Turismo en Japón",58.6],["Estudiar en Japón",57.6],["Trabajar en Japón",35.0],["Trabajo en mi país",34.5,"2021: 85%"],["Ciencia y tecnología",31.0],["Avance educativo en mi país",30.0]],
+    sa:[["Anime, manga, J-pop, moda",90.8],["Interés en el idioma",82.2],["Historia, literatura, arte",73.4],["Estudiar en Japón",71.3,"2021: 29,2%"],["Turismo en Japón",69.2],["Lengua de herencia (nikkei)",54.8],["Trabajar en Japón",46.5],["Avance educativo en mi país",42.2],["Ciencia y tecnología",34.3],["Trabajo en mi país",33.4,"2021: 73,6%"]],
+    world:[["Anime, manga, J-pop, moda",61.3],["Interés en el idioma",56.8],["Historia, literatura, arte",44.4],["Estudiar en Japón",37.3],["Trabajar en Japón",36.4],["Turismo en Japón",33.9],["Avance educativo en mi país",29.8],["Trabajo en mi país",24.9,"2021: 40,6%"],["Ciencia y tecnología",21.4],["Entender otras culturas",20.1]]
+  };
+  var N={ca:"Centroamérica y Caribe: 203 instituciones (≈85% de alumnos en México)",sa:"Sudamérica: 467 instituciones",world:"Mundo: 19.344 instituciones"};
+  function motives(r){
+    var rows=M[r].map(function(m){
+      var hl=/Japón/.test(m[0]);
+      return {label:m[0],v:m[1],fmt:f1.format(m[1])+"%",hl:hl,tip:"<b>"+m[0]+"</b><br>"+f1.format(m[1])+"% de las instituciones (2024)"+(m[2]?"<br>"+m[2]:"")+"<br><span style='opacity:.75'>"+N[r]+"</span>"};
+    });
+    renderBars(document.getElementById("motBars"),rows,{max:100});
+  }
+  document.querySelectorAll("#chartMotives .seg button").forEach(function(b){
+    b.addEventListener("click",function(){
+      document.querySelectorAll("#chartMotives .seg button").forEach(function(x){x.setAttribute("aria-pressed","false");});
+      b.setAttribute("aria-pressed","true"); motives(b.getAttribute("data-region"));
+    });
+  });
+  motives("ca");
+  var mc=document.getElementById("chartMotives");
+  var lg=el("div","legend",'<span><i style="background:var(--shu)"></i>Motivos que implican ir a Japón</span><span><i style="background:var(--ai)"></i>Resto de motivos</span>');
+  mc.appendChild(lg);
+
+  /* ---------- travel ---------- */
+  var T=[["México 2024",151800,"151.800 (+60% vs 2023)"],["México 2025",200400,"200.400 (+32%), récord"],["España 2024",182300,"182.300 (+57% vs 2023)"],["España 2025",245600,"245.600 (+32%), récord"]];
+  renderBars(document.getElementById("travelBars"),T.map(function(t){return {label:t[0],v:t[1],fmt:fmt.format(t[1]),hl:/2025/.test(t[0]),tip:"<b>"+t[0]+"</b><br>"+t[2]};}),{max:245600});
+
+  /* ---------- hours ---------- */
+  var H=[["N5",325,600,250,450],["N4",575,1000,400,700],["N3",950,1700,700,1100],["N2",1600,2800,1150,1800],["N1",3000,4800,1700,2600]];
+  var hb=document.getElementById("hoursBars"), HMAX=5000;
+  H.forEach(function(h){
+    var row=el("div","bar-row"); row.tabIndex=0;
+    row.setAttribute("data-tip","<b>"+h[0]+"</b><br>Sin saber kanji: "+fmt.format(h[1])+"–"+fmt.format(h[2])+" h<br>Ya sabe kanji: "+fmt.format(h[3])+"–"+fmt.format(h[4])+" h");
+    row.setAttribute("aria-label",h[0]+": "+h[1]+" a "+h[2]+" horas sin kanji");
+    row.appendChild(el("div","bar-label","<b>"+h[0]+"</b>"));
+    var tr=el("div","bar-track"); tr.style.height="34px"; tr.style.display="block";
+    var a=el("div","range lt"); a.style.left=(h[3]/HMAX*85)+"%"; a.style.width=((h[4]-h[3])/HMAX*85)+"%"; a.style.top="2px"; a.style.height="10px";
+    var b=el("div","range"); b.style.left=(h[1]/HMAX*85)+"%"; b.style.width=((h[2]-h[1])/HMAX*85)+"%"; b.style.top="16px";
+    var v=el("span","bar-val",fmt.format(h[1])+"–"+fmt.format(h[2])+" h"); v.style.position="absolute"; v.style.left=(h[2]/HMAX*85+1)+"%"; v.style.top="12px";
+    tr.appendChild(a); tr.appendChild(b); tr.appendChild(v);
+    row.appendChild(tr); hb.appendChild(row);
+  });
+
+  /* ---------- calculator ---------- */
+  var hrs=document.getElementById("hrs"), hv=document.getElementById("hrsVal"), out=document.getElementById("calcOut");
+  var GOALS=[["N5","Leer kana, frases básicas, viajar mejor",325,600],["N4","Visa SSW para trabajar en Japón",575,1000],["N3","Traductor de planta en el Bajío",950,1700],["N2","Empleo de oficina en Japón",1600,2800],["FSI","Dominio profesional (FSI Cat. IV, en aula)",2200,2200]];
+  function dur(hours,perWeek){ var w=hours/perWeek; if(w<9) return Math.round(w)+" sem"; var m=w/4.345; if(m<24) return Math.round(m)+" meses"; return f1.format(m/12)+" años"; }
+  function calc(){
+    var p=parseFloat(hrs.value); hv.textContent=p.toLocaleString("es-ES",{maximumFractionDigits:2});
+    out.innerHTML="";
+    GOALS.forEach(function(g){
+      var t=g[2]===g[3]?dur(g[2],p):dur(g[2],p)+" – "+dur(g[3],p);
+      out.appendChild(el("div","co","<span class='l'>"+g[0]+"</span><span class='what'>"+g[1]+"</span><span class='t'>"+t+"</span>"));
+    });
+  }
+  hrs.addEventListener("input",calc);
+  document.querySelectorAll(".presets button").forEach(function(b){ b.addEventListener("click",function(){ hrs.value=b.getAttribute("data-h"); calc(); }); });
+  calc();
+
+  /* ---------- nav: active station + progress ---------- */
+  var links=[].slice.call(document.querySelectorAll(".line-nav a"));
+  var map={}; links.forEach(function(a){ map[a.getAttribute("href").slice(1)]=a; });
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          links.forEach(function(a){a.classList.remove("active");});
+          var a=map[en.target.id]; if(a){ a.classList.add("active"); try{ a.scrollIntoView({block:"nearest",inline:"center",behavior:"smooth"}); }catch(e){} }
+        }
+      });
+    },{rootMargin:"-40% 0px -55% 0px"});
+    Object.keys(map).forEach(function(id){ var s=document.getElementById(id); if(s) io.observe(s); });
+  }
+  var prog=document.getElementById("progress");
+  function onScroll(){ var h=document.documentElement; var p=h.scrollTop/(h.scrollHeight-h.clientHeight); prog.style.width=(Math.max(0,Math.min(1,p))*100)+"%"; }
+  window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+})();
+</script>
 </body>
 </html>
