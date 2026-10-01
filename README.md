@@ -9,6 +9,7 @@ Cada investigación vive en su propia carpeta, organizada por tema.
 | Tema | Descripción | Fecha |
 |------|-------------|-------|
 | [⌨️ Teclados Hall Effect: Attack Shark X68PRO vs LDON Mide68 Pro](./teclados-hall-effect/) | Comparativa punto por punto de dos teclados magnéticos 65%, con explicación de qué significa cada spec en la práctica. | 2026-06 |
+| [🇯🇵 Por qué los hispanos quieren aprender japonés](./japones-hispanos/) | Motivos (anime, cultura, viaje, trabajo) y dolores (kanji, keigo, tiempo, sin material en español), con 15 fuentes académicas y foros. | 2026-10 |
 
 ---
 
